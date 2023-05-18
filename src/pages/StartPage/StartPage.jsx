@@ -18,6 +18,7 @@ const StartPage = () => {
 
 export default StartPage;
 
-const MainBody = styled.body`
-  background-image: url('../../assets/black-door.png');
+const MainBody = styled.div`
+  width: 100vw;
+  height: 100vh;
 `;

@@ -1,7 +1,7 @@
-import { css } from "styled-components";
+import { css } from 'styled-components';
 
 const variables = {
-  flex: (direction = "row", justify = "center", align = "center") => `
+  flex: (direction = 'row', justify = 'center', align = 'center') => `
     display: flex;
     flex-direction: ${direction};
     justify-content: ${justify};

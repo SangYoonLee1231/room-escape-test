@@ -13,6 +13,11 @@ const GlobalStyle = createGlobalStyle`
     padding: 0px;
     list-style: none;
   }
+
+  body {
+    background-image: url('./images/geometric-1906240_1920.jpg');
+    background-size: 100%;
+  }
 `;
 
 export default GlobalStyle;
