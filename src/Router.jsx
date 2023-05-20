@@ -3,6 +3,7 @@ import StartPage from './pages/StartPage/StartPage';
 import InstructionPage from './pages/InstructionPage/InstructionPage';
 import LevelSelectPage from './pages/LevelSelectPage/LevelSelectPage';
 import Root from './Root';
+import TestOnePage from './pages/TestOnePage/TestOnePage';
 
 const router = createBrowserRouter([
   {
@@ -17,7 +18,7 @@ const router = createBrowserRouter([
         // ) /* Home 컴포넌트에서 에러 발생시 ErrorComponent를 render 한다 (여기서 다른 컴포넌트로 이동 가능) */,
       },
       {
-        path: '/instruction',
+        path: 'instruction',
         element: (
           <InstructionPage />
         ) /* Root의 Outlet이 StartPage 컴포넌트로 대체 */,
@@ -29,9 +30,9 @@ const router = createBrowserRouter([
         ) /* Root의 Outlet이 LevelSelectPage 컴포넌트로 대체 */,
       },
       {
-        path: 'instruction',
+        path: 'test-one',
         element: (
-          <InstructionPage />
+          <TestOnePage />
         ) /* Root의 Outlet이 LevelSelectPage 컴포넌트로 대체 */,
       },
     ],

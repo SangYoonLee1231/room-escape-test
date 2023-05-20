@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 const StartPage = () => {
-  const navigate = useNavigate;
+  const navigate = useNavigate();
   const onAboutClick = () => {
     navigate('/instruction');
   };
@@ -30,11 +30,11 @@ const Logo = styled.img.attrs({
 })``;
 
 const StartButton = styled.button`
-  width: 100px;
-  height: 50px;
+  width: 150px;
+  height: 60px;
   border: 1px solid black;
   border-radius: 5px;
-  font-size: larger;
+  font-size: x-large;
   &:hover {
     background-color: black;
     color: white;
