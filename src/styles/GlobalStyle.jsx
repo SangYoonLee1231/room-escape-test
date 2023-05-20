@@ -15,8 +15,10 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-image: url('./images/geometric-1906240_1920.jpg');
-    background-size: 100%;
+    background: url('./images/pattern-7271947.png') no-repeat fixed 50% 50%;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
   }
 `;
 
