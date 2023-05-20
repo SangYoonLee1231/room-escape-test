@@ -22,7 +22,7 @@ const TestOnePage = () => {
       <HeaderArea>
         <Timer />
       </HeaderArea>
-      <Question src={`./images/questions/${quizNum}.png`} />
+      <Question src={`./images/questions/q${quizNum}.png`} />
       <FooterArea>
         <QuestionBar>
           <MoveBtn onClick={moveToPrev}>◀︎</MoveBtn>

@@ -26,7 +26,7 @@ const MainBody = styled.div`
 `;
 
 const Logo = styled.img.attrs({
-  src: `./images/etc/logo.png`,
+  src: `./images/etc/title.png`,
 })``;
 
 const StartButton = styled.button`
