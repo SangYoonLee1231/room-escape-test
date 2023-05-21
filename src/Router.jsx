@@ -12,7 +12,7 @@ const router = createBrowserRouter([
     element: <Root /> /* 기본적으로 Root 컴포넌트를 render 한다 */,
     children: [
       {
-        path: '',
+        path: '/',
         element: <StartPage /> /* Root의 Outlet이 StartPage 컴포넌트로 대체 */,
         // errorElement: (
         //   <ErrorComponent />
