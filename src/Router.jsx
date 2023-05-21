@@ -2,8 +2,9 @@ import { createBrowserRouter } from 'react-router-dom';
 import StartPage from './pages/StartPage/StartPage';
 import InstructionPage from './pages/InstructionPage/InstructionPage';
 import LevelSelectPage from './pages/LevelSelectPage/LevelSelectPage';
-import Root from './Root';
 import TestOnePage from './pages/TestOnePage/TestOnePage';
+import ResultPage from './pages/ResultPage/ResultPage';
+import Root from './Root';
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,12 @@ const router = createBrowserRouter([
         path: 'test-one',
         element: (
           <TestOnePage />
+        ) /* Root의 Outlet이 LevelSelectPage 컴포넌트로 대체 */,
+      },
+      {
+        path: 'result',
+        element: (
+          <ResultPage />
         ) /* Root의 Outlet이 LevelSelectPage 컴포넌트로 대체 */,
       },
     ],

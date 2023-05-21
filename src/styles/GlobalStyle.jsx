@@ -7,7 +7,14 @@ const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: 'SEBANG_Gothic';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SEBANG_Gothic_Bold.woff') format('woff');
-    font-weight: 400;
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'SEBANG_Gothic_Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SEBANG_Gothic_Bold.woff') format('woff');
+    font-weight: small;
     font-style: normal;
   }
 
@@ -16,7 +23,14 @@ const GlobalStyle = createGlobalStyle`
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/국립박물관문화재단클래식B.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-}
+  }
+
+  @font-face {
+    font-family: 'paybooc';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/paybooc-Bold.woff') format('woff');
+    font-weight: small;
+    font-style: normal;
+  }
 
   * {
     box-sizing: border-box;
@@ -32,7 +46,26 @@ const GlobalStyle = createGlobalStyle`
     background: url('./images/backgrounds/pattern-7271947.png') no-repeat fixed 50% 50%;
     background-size: cover;
     height: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
+  }
+
+  a:hover, a:visited, a:link, a:active {
+      text-decoration: none;
+  }
+  a:hover{
+      color: #a00;
+  }
+
+  * {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
   }
 `;
 

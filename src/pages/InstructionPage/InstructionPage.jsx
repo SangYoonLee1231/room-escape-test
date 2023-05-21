@@ -22,7 +22,7 @@ const MainBody = styled.div`
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 100vh;
+  height: 95vh;
 `;
 
 const InstructionInfo = styled.img.attrs({
