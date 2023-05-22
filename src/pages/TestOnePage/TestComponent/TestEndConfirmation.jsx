@@ -16,7 +16,7 @@ const TestEndConfirmation = () => {
 
   const handleConfirm = () => {
     // 확인 버튼을 눌렀을 때 수행할 작업
-    console.log('Confirmed!');
+    // console.log('Confirmed!');
     closeModal();
   };
 

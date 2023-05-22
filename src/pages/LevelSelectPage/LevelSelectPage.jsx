@@ -47,7 +47,7 @@ const InstructionInfo = styled.div`
   justify-content: center;
   align-items: center;
   width: 550px;
-  height: 120px;
+  height: 90px;
   margin: 10px 20px 40px 20px;
   background-color: #ecefef;
   font-family: 'SEBANG_Gothic';
