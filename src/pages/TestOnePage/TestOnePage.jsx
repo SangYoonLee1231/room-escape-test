@@ -6,19 +6,6 @@ import Modal from 'react-modal';
 
 Modal.setAppElement('#root');
 
-// 새로고침 방지 코드
-// function NotReload() {
-//   if (
-//     (event.ctrlKey == true && (event.keyCode == 78 || event.keyCode == 82)) ||
-//     event.keyCode == 116
-//   ) {
-//     event.keyCode = 0;
-//     event.cancelBubble = true;
-//     event.returnValue = false;
-//   }
-// }
-// document.onkeydown = NotReload;
-
 const TestOnePage = () => {
   // 페이지 이동 Hook
   const navigate = useNavigate();
@@ -27,8 +14,8 @@ const TestOnePage = () => {
   };
 
   // 타이머 설정 코드 - useState Hook
-  const [quizNum, setQuizNum] = useState(0);
-  const [timeRemain, setTimeRemain] = useState(1800);
+  const [quizNum, setQuizNum] = useState(1);
+  const [timeRemain, setTimeRemain] = useState(900);
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -74,15 +61,14 @@ const TestOnePage = () => {
 
   // 퀴즈 번호 이동 관리 함수 코드
   const moveToPrev = () => {
-    setQuizNum(quizNum => (quizNum >= 1 ? quizNum - 1 : 0));
+    setQuizNum(quizNum => (quizNum >= 2 ? quizNum - 1 : 20));
   };
 
   const moveToNext = () => {
-    setQuizNum(quizNum => (quizNum <= 19 ? quizNum + 1 : 20));
+    setQuizNum(quizNum => (quizNum <= 19 ? quizNum + 1 : 1));
   };
 
   // 모달 창 관리 코드
-
   const openModal = () => {
     setIsOpen(true);
   };
@@ -93,7 +79,6 @@ const TestOnePage = () => {
 
   const handleConfirm = () => {
     // 확인 버튼을 눌렀을 때 수행할 작업
-    console.log('Confirmed!');
     moveToResultPage();
     closeModal();
   };
@@ -114,11 +99,36 @@ const TestOnePage = () => {
           <MoveBtn onClick={moveToNext}>▶︎</MoveBtn>
         </QuestionBar>
         <EndBtn onClick={openModal}>시험 종료하기</EndBtn>
-        <CustomModal isOpen={isOpen} onRequestClose={closeModal}>
-          <p>정말 시험을 종료하고 정답을 확인하시겠습니까?</p>
-          <button onClick={handleConfirm}>예. 종료합니다.</button>
-          <button onClick={closeModal}>아니오. 계속 풀겠습니다.</button>
-        </CustomModal>
+        <Modal
+          isOpen={isOpen}
+          onRequestClose={closeModal}
+          style={{
+            overlay: {
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            },
+            content: {
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+              width: '400px',
+              height: '200px',
+              border: '5px solid red',
+              backgroundColor: 'black',
+              color: 'white',
+            },
+          }}
+        >
+          <ModalMessage>
+            정말 시험을 종료하고 정답을 확인하시겠습니까?
+          </ModalMessage>
+          <ModalBtn bgColor="#4b4b4f" fontColor="white" onClick={handleConfirm}>
+            🆗 예. 종료합니다.
+          </ModalBtn>
+          <ModalBtn onClick={closeModal}>❌ 아니오. 계속 풀겠습니다.</ModalBtn>
+        </Modal>
       </FooterArea>
     </MainBody>
   );
@@ -136,6 +146,7 @@ const MainBody = styled.div`
 const HeaderArea = styled.div`
   display: flex;
   align-items: space-between;
+  margin-bottom: 15px;
 `;
 
 const Timer = styled.div`
@@ -167,7 +178,7 @@ const FooterArea = styled.div`
   display: flex;
   flex-direction: column;
   align-items: space-between;
-  margin: 30px 0px;
+  margin: 15px 0px;
 `;
 
 const QuestionBar = styled.div`
@@ -194,17 +205,18 @@ const EndBtn = styled.button`
   font-size: medium;
 `;
 
-const CustomModal = styled(Modal)`
-  overlay {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+const ModalMessage = styled.div`
+  margin-bottom: 30px;
+  font-family: 'paybooc';
+`;
 
-  content {
-    width: 400px;
-    height: 200px;
-  }
+const ModalBtn = styled.button`
+  background-color: ${props => props.bgColor};
+  color: ${props => props.fontColor};
+  padding: 5px 15px;
+  margin: 5px;
+  font-size: small;
+  border-radius: 10px;
 `;
 
 export default TestOnePage;

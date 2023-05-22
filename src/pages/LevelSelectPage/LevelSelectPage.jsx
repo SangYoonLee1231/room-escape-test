@@ -18,10 +18,14 @@ const LevelSelctPage = () => {
         </Text>
         <TestOneInfo>
           <Text fontSize="14px">
-            방탈출의 기본기를 테스트하는 가장 베이직한 시험
+            방탈출 문제 해결 능력을 검사하는 가장 베이직한 시험
           </Text>
+          <Text fontSize="13px">
+            (기본기를 바탕으로 문제를 빠르고 정확하게 해결하는 것이 관건)
+          </Text>
+          <Text fontSize="3px" />
           <Text fontSize="12px">▸ 추천 대상: 모든 인원</Text>
-          <Text fontSize="12px">▸ 20문제 / 제한시간: 30분</Text>
+          <Text fontSize="12px">▸ 문제 수 : 20문제 / 제한시간: 15분</Text>
         </TestOneInfo>
       </TestOneButton>
     </MainBody>
@@ -55,8 +59,8 @@ const TestOneButton = styled.button`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 400px;
-  height: 200px;
+  width: 430px;
+  height: 230px;
   /* border: 1px solid black; */
   border-radius: 5px;
   font-size: x-large;
@@ -74,8 +78,8 @@ const TestOneInfo = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 370px;
-  height: 85px;
+  width: 400px;
+  height: 115px;
   margin-top: 5px;
   /* border: 2.5px solid #50505e; */
   border-radius: 5px;
