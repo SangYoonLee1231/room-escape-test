@@ -45,8 +45,24 @@ const GlobalStyle = createGlobalStyle`
   body {
     background: url('./images/backgrounds/pattern-7271947.png') no-repeat fixed 50% 50%;
     background-size: cover;
+    background-repeat: repeat;
     height: 100%;
     overflow-x: hidden;
+    animation: moveBackground 35s linear infinite;
+  }
+
+  @keyframes moveBackground {
+    0% {
+      background-position: 0% 0%;
+    }
+
+    50% {
+      background-position: 100% 100%;
+    }
+
+    100% {
+      background-position: 0% 0%;
+    }
   }
 
   a:hover, a:visited, a:link, a:active {

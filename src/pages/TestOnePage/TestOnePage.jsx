@@ -10,14 +10,28 @@ const TestOnePage = () => {
   // 페이지 이동 Hook
   const navigate = useNavigate();
   const moveToResultPage = () => {
-    navigate('/result');
+    const data = JSON.stringify(inputValues);
+    navigate(`/result`, {
+      state: {
+        answersheet: data,
+      },
+    });
   };
 
   // 타이머 설정 코드 - useState Hook
   const [quizNum, setQuizNum] = useState(1);
-  const [timeRemain, setTimeRemain] = useState(900);
+  const [timeRemain, setTimeRemain] = useState(1200);
 
+  // 모달 창 Hook
   const [isOpen, setIsOpen] = useState(false);
+
+  // 답안지 토글 관리 Hook
+  const [isAnswerSheetOpen, setIsAnswerSheetOpen] = useState(false);
+
+  // 답안지 작성 내용 관리 Hook
+  const [inputValues, setInputValues] = useState(Array(20).fill(''));
+
+  useEffect(() => {}, [inputValues]);
 
   // 타이머 설정 코드 - 기능 수행 Hook
   useEffect(() => {
@@ -83,6 +97,24 @@ const TestOnePage = () => {
     closeModal();
   };
 
+  // 답안지 토글 관리 함수
+  const handleAnswerSheetOpen = () => {
+    setIsAnswerSheetOpen(true);
+  };
+
+  const handleAnswerSheetClose = () => {
+    setIsAnswerSheetOpen(false);
+  };
+
+  // 답안지 작성 관리 함수
+  const handleChange = (index, event) => {
+    const newInputValues = [...inputValues];
+    newInputValues[index] = event.target.value;
+    setInputValues(newInputValues);
+
+    // console.log(inputValues);
+  };
+
   return (
     <MainBody>
       <HeaderArea>
@@ -98,7 +130,12 @@ const TestOnePage = () => {
           <QuestionNum>{quizNum} / 20</QuestionNum>
           <MoveBtn onClick={moveToNext}>▶︎</MoveBtn>
         </QuestionBar>
-        <EndBtn onClick={openModal}>시험 종료하기</EndBtn>
+        <BtnArea>
+          <AnswerSheetBtn onClick={handleAnswerSheetOpen}>
+            답안지 작성
+          </AnswerSheetBtn>
+          <EndBtn onClick={openModal}>답안지 제출하기</EndBtn>
+        </BtnArea>
         <Modal
           isOpen={isOpen}
           onRequestClose={closeModal}
@@ -113,8 +150,8 @@ const TestOnePage = () => {
               flexDirection: 'column',
               justifyContent: 'center',
               alignItems: 'center',
-              width: '400px',
-              height: '200px',
+              width: '460px',
+              height: '220px',
               border: '5px solid red',
               backgroundColor: 'black',
               color: 'white',
@@ -122,14 +159,37 @@ const TestOnePage = () => {
           }}
         >
           <ModalMessage>
-            정말 시험을 종료하고 정답을 확인하시겠습니까?
+            정말 시험을 종료하고 답안지를 제출하시겠습니까?
+          </ModalMessage>
+          <ModalMessage>
+            답안지에 오타가 없는지 다시 한 번 확인하시기 바랍니다.
           </ModalMessage>
           <ModalBtn bgColor="#4b4b4f" fontColor="white" onClick={handleConfirm}>
-            🆗 예. 종료합니다.
+            🆗 예. 답안지를 제출하고 시험을 종료합니다.
           </ModalBtn>
           <ModalBtn onClick={closeModal}>❌ 아니오. 계속 풀겠습니다.</ModalBtn>
         </Modal>
       </FooterArea>
+      {isAnswerSheetOpen && (
+        <AnswerSheetArea>
+          <AnswerSheet>
+            {inputValues.map((value, index) => (
+              <AnswerSheetElement key={index}>
+                <span>{index + 1}.</span>
+                <input
+                  key={index}
+                  type="text"
+                  value={value}
+                  onChange={event => handleChange(index, event)}
+                />
+              </AnswerSheetElement>
+            ))}
+          </AnswerSheet>
+          <AnswerSheetCloseBtn onClick={handleAnswerSheetClose}>
+            답안지 닫기
+          </AnswerSheetCloseBtn>
+        </AnswerSheetArea>
+      )}
     </MainBody>
   );
 };
@@ -140,12 +200,14 @@ const MainBody = styled.div`
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 95vh;
+  padding-bottom: 100px;
+  /* height: 95vh; */
 `;
 
 const HeaderArea = styled.div`
   display: flex;
   align-items: space-between;
+  margin-top: 10vh;
   margin-bottom: 15px;
 `;
 
@@ -193,20 +255,46 @@ const MoveBtn = styled.button`
   border: 1px solid black;
   border-radius: 5px;
   font-size: x-large;
+  transition: transform 0.1s ease-in-out;
   &:hover {
     background-color: black;
     color: white;
     border: 1px solid wheat;
+    transform: scale(1.1);
   }
 `;
 
+const BtnArea = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 const EndBtn = styled.button`
+  width: 230px;
   height: 30px;
+  margin: 0px 10px;
   font-size: medium;
+  transition: transform 0.1s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+  }
+`;
+
+const AnswerSheetBtn = styled.button`
+  width: 230px;
+  height: 30px;
+  margin: 0px 10px;
+  font-size: medium;
+  transition: transform 0.1s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+  }
 `;
 
 const ModalMessage = styled.div`
   margin-bottom: 30px;
+  font-size: large;
   font-family: 'paybooc';
 `;
 
@@ -215,8 +303,58 @@ const ModalBtn = styled.button`
   color: ${props => props.fontColor};
   padding: 5px 15px;
   margin: 5px;
-  font-size: small;
+  font-size: medium;
   border-radius: 10px;
+`;
+
+const AnswerSheetArea = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10vh;
+`;
+
+const AnswerSheet = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  padding: 20px 0px;
+  border: 2px solid black;
+  background-color: white;
+  border-radius: 2px;
+`;
+
+const AnswerSheetElement = styled.div`
+  padding: 5px;
+  margin: 2px 0px;
+  span {
+    font-family: 'paybooc';
+  }
+  input {
+    width: 100px;
+    margin: 0px 10px;
+    border: none;
+    border-bottom: 1px solid black;
+    font-size: 15px;
+    text-align: center;
+    &:focus {
+      outline: none;
+    }
+  }
+`;
+
+const AnswerSheetCloseBtn = styled.button`
+  width: 350px;
+  height: 30px;
+  margin: 10px 10px;
+  font-size: medium;
+  transition: transform 0.1s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+  }
 `;
 
 export default TestOnePage;

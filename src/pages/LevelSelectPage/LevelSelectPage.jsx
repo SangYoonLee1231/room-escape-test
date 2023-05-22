@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 const LevelSelctPage = () => {
   const navigate = useNavigate();
@@ -18,14 +18,16 @@ const LevelSelctPage = () => {
         </Text>
         <TestOneInfo>
           <Text fontSize="14px">
-            방탈출 문제 해결 능력을 검사하는 가장 베이직한 시험
+            방탈출 문제 해결 능력을 평가하는 가장 베이직한 시험
           </Text>
           <Text fontSize="13px">
             (기본기를 바탕으로 문제를 빠르고 정확하게 해결하는 것이 관건)
           </Text>
           <Text fontSize="3px" />
-          <Text fontSize="12px">▸ 추천 대상: 모든 인원</Text>
-          <Text fontSize="12px">▸ 문제 수 : 20문제 / 제한시간: 15분</Text>
+          <Text fontSize="12px">
+            ▸ 시험 대상 : 모든 인원 (초보자에게 특히 추천)
+          </Text>
+          <Text fontSize="12px">▸ 문제 수 : 20문제 / 제한시간: 20분</Text>
         </TestOneInfo>
       </TestOneButton>
     </MainBody>
@@ -66,10 +68,12 @@ const TestOneButton = styled.button`
   font-size: x-large;
   background-color: #50505e;
   color: #ecefef;
+  transition: transform 0.1s ease-in-out;
   &:hover {
     background-color: black;
     color: white;
     border: 1px solid wheat;
+    transform: scale(1.1);
   }
 `;
 
