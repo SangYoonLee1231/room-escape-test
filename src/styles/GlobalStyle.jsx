@@ -48,7 +48,7 @@ const GlobalStyle = createGlobalStyle`
     background-repeat: repeat;
     height: 100%;
     overflow-x: hidden;
-    animation: moveBackground 35s linear infinite;
+    animation: moveBackground 36.5s linear infinite;
   }
 
   @keyframes moveBackground {

@@ -5,6 +5,7 @@ import LevelSelectPage from './pages/LevelSelectPage/LevelSelectPage';
 import TestOnePage from './pages/TestOnePage/TestOnePage';
 import ResultPage from './pages/ResultPage/ResultPage';
 import Root from './Root';
+import TestOneBeforeStart from './pages/TestOnePage/TestOneBeforeStart';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,12 @@ const router = createBrowserRouter([
         path: 'level-select',
         element: (
           <LevelSelectPage />
+        ) /* Root의 Outlet이 LevelSelectPage 컴포넌트로 대체 */,
+      },
+      {
+        path: 'test-one-before-start',
+        element: (
+          <TestOneBeforeStart />
         ) /* Root의 Outlet이 LevelSelectPage 컴포넌트로 대체 */,
       },
       {

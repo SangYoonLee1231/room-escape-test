@@ -5,7 +5,7 @@ import styled, { keyframes } from 'styled-components';
 const LevelSelctPage = () => {
   const navigate = useNavigate();
   const moveToTestOne = () => {
-    navigate('/test-one');
+    navigate('/test-one-before-start');
   };
 
   return (
@@ -25,9 +25,9 @@ const LevelSelctPage = () => {
           </Text>
           <Text fontSize="3px" />
           <Text fontSize="12px">
-            ▸ 시험 대상 : 모든 인원 (초보자에게 특히 추천)
+            ▸ 시험 추천 대상 : 모든 인원 (초보자에게 특히 추천)
           </Text>
-          <Text fontSize="12px">▸ 문제 수 : 20문제 / 제한시간: 20분</Text>
+          <Text fontSize="12px">▸ 문제 수 : 20문제 / 제한시간: 15분</Text>
         </TestOneInfo>
       </TestOneButton>
     </MainBody>
@@ -51,6 +51,7 @@ const InstructionInfo = styled.div`
   width: 550px;
   height: 90px;
   margin: 10px 20px 40px 20px;
+  /* border-radius: 5px; */
   background-color: #ecefef;
   font-family: 'SEBANG_Gothic';
   font-size: 32px;

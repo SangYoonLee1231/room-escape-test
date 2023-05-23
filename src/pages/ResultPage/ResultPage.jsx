@@ -6,9 +6,16 @@ const ResultPage = () => {
   const location = useLocation();
 
   const answersheet = JSON.parse(location.state.answersheet);
+  const nickname = location.state.nickname;
   console.log(answersheet);
+  console.log(nickname);
 
-  return <MainBody>{answersheet}</MainBody>;
+  return (
+    <MainBody>
+      <DivOne>{nickname}</DivOne>
+      <DivTwo>{answersheet}</DivTwo>
+    </MainBody>
+  );
 };
 
 const MainBody = styled.div`
@@ -17,5 +24,9 @@ const MainBody = styled.div`
   background-color: white;
   color: black;
 `;
+
+const DivOne = styled.div``;
+
+const DivTwo = styled.div``;
 
 export default ResultPage;

@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
-// import TestEndConfirmation from './TestComponent/TestEndConfirmation';
 import Modal from 'react-modal';
 
 Modal.setAppElement('#root');
 
 const TestOnePage = () => {
+  // 닉네임 정보 받아오기
+  const location = useLocation();
+
+  const nickname = location.state.nickname;
+
   // 페이지 이동 Hook
   const navigate = useNavigate();
   const moveToResultPage = () => {
@@ -14,13 +18,14 @@ const TestOnePage = () => {
     navigate(`/result`, {
       state: {
         answersheet: data,
+        nickname: nickname,
       },
     });
   };
 
   // 타이머 설정 코드 - useState Hook
   const [quizNum, setQuizNum] = useState(1);
-  const [timeRemain, setTimeRemain] = useState(1200);
+  const [timeRemain, setTimeRemain] = useState(900);
 
   // 모달 창 Hook
   const [isOpen, setIsOpen] = useState(false);
@@ -217,6 +222,7 @@ const Timer = styled.div`
   align-items: center;
   width: 400px;
   height: 50px;
+  border-radius: 5px;
   background-color: black;
   color: #ecefef;
   font-family: 'SEBANG_Gothic';
@@ -229,6 +235,7 @@ const QuestionNum = styled.div`
   align-items: center;
   width: 400px;
   height: 50px;
+  border-radius: 5px;
   background-color: black;
   color: #ecefef;
   font-family: 'SEBANG_Gothic';
