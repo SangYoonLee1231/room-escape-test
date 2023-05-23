@@ -25,7 +25,7 @@ const LevelSelctPage = () => {
           </Text>
           <Text fontSize="3px" />
           <Text fontSize="12px">
-            ▸ 시험 추천 대상 : 모든 인원 (초보자에게 특히 추천)
+            ▸ 추천 대상 : 모든 인원 (초보자에게 특히 추천)
           </Text>
           <Text fontSize="12px">▸ 문제 수 : 20문제 / 제한시간: 15분</Text>
         </TestOneInfo>

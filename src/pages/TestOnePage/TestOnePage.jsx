@@ -36,6 +36,9 @@ const TestOnePage = () => {
   // 답안지 작성 내용 관리 Hook
   const [inputValues, setInputValues] = useState(Array(20).fill(''));
 
+  // 새로고침 관련 Hook
+  const [isRefreshing, setIsRefreshing] = useState(false);
+
   useEffect(() => {}, [inputValues]);
 
   // 타이머 설정 코드 - 기능 수행 Hook
@@ -54,10 +57,11 @@ const TestOnePage = () => {
   // 새로고침 방지 Hook
   useEffect(() => {
     const handleBeforeUnload = event => {
-      event.preventDefault();
+      setIsRefreshing(true);
       // 사용자에게 표시할 메시지
       event.returnValue =
         '새로고침은 부정행위입니다. 저는 여러분의 양심을 믿습니다.';
+      event.preventDefault();
     };
 
     const handleRefresh = event => {
@@ -128,6 +132,11 @@ const TestOnePage = () => {
           {String(timeRemain % 60).padStart(2, '0')}
         </Timer>
       </HeaderArea>
+      {/* {isRefreshing ? (
+        <BlackScreen />
+      ) : (
+        <Question src={`./images/questions/q${quizNum}.png`} />
+      )} */}
       <Question src={`./images/questions/q${quizNum}.png`} />
       <FooterArea>
         <QuestionBar>
@@ -242,6 +251,12 @@ const QuestionNum = styled.div`
 `;
 
 const Question = styled.img``;
+
+const BlackScreen = styled.div`
+  background-color: black;
+  width: 400px;
+  height: 400px;
+`;
 
 const FooterArea = styled.div`
   display: flex;

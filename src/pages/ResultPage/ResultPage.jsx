@@ -7,8 +7,8 @@ const ResultPage = () => {
 
   const answersheet = JSON.parse(location.state.answersheet);
   const nickname = location.state.nickname;
-  console.log(answersheet);
-  console.log(nickname);
+  // console.log(answersheet);
+  // console.log(nickname);
 
   return (
     <MainBody>

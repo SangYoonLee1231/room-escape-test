@@ -9,7 +9,7 @@ const TestOneBeforeStart = () => {
     const nickname = inputNickname;
     navigate(`/test-one`, {
       state: {
-        nickname: nickname || '',
+        nickname: nickname || '학생',
       },
     });
   };
@@ -55,7 +55,7 @@ const TestOneBeforeStart = () => {
   return (
     <MainBody>
       <HeaderArea>
-        <Timer>20:00</Timer>
+        <Timer>15:00</Timer>
       </HeaderArea>
       {/* <Instruction src="./images/etc/before-start-test.png" /> */}
       <Instruction>
@@ -66,18 +66,17 @@ const TestOneBeforeStart = () => {
             바랍니다.
           </InstructionList>
           <InstructionList>
-            ⁃ 제한시간이 모두 지나거나 답안지를 제출하면, 자동으로 채점되어 시험
-            결과가 발표됩니다.
+            ⁃ 답안지를 제출하거나 제한시간이 모두 지나면, 자동으로 채점되어 시험
+            결과가 발표됩니다. 채점 시 영어 대소문자는 구분하지 않습니다.
           </InstructionList>
           <InstructionList>
-            ⁃ 시험 시작 전, 종이와 펜을 미리 준비하시는 것을 추천합니다. (반드시
-            필요한 것은 아니지만, 만일 있다면 문제 풀이가 좀 더 수월할
-            것입니다.)
+            ⁃ 시험 시작 전, 종이와 펜을 미리 준비해주시기 바랍니다. 반드시
+            필요한 것은 아니지만, 만일 있다면 문제 풀이가 좀 더 수월할 것입니다.
           </InstructionList>
           <InstructionList>
             ⁃ 시험이 진행되는 도중에는 새로고침을 하거나 페이지를 이탈하지
-            않도록 각별히 주의해주시기 바랍니다. (작성했던 답안이 모두 초기화될
-            수 있습니다.)
+            않도록 각별히 주의해주시기 바랍니다. 답안지가 모두 초기화될 수
+            있습니다.
           </InstructionList>
         </ul>
       </Instruction>
