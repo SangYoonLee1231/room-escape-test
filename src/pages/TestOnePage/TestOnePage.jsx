@@ -15,10 +15,10 @@ const TestOnePage = () => {
   const navigate = useNavigate();
   const moveToResultPage = () => {
     const data = JSON.stringify(inputValues);
-    navigate(`/result`, {
+    navigate(`/test-one-result`, {
       state: {
-        answersheet: data,
-        nickname: nickname,
+        answersheet: data || '',
+        nickname: nickname || '',
       },
     });
   };
@@ -35,9 +35,6 @@ const TestOnePage = () => {
 
   // 답안지 작성 내용 관리 Hook
   const [inputValues, setInputValues] = useState(Array(20).fill(''));
-
-  // 새로고침 관련 Hook
-  const [isRefreshing, setIsRefreshing] = useState(false);
 
   useEffect(() => {}, [inputValues]);
 
@@ -57,7 +54,6 @@ const TestOnePage = () => {
   // 새로고침 방지 Hook
   useEffect(() => {
     const handleBeforeUnload = event => {
-      setIsRefreshing(true);
       // 사용자에게 표시할 메시지
       event.returnValue =
         '새로고침은 부정행위입니다. 저는 여러분의 양심을 믿습니다.';
@@ -164,8 +160,8 @@ const TestOnePage = () => {
               flexDirection: 'column',
               justifyContent: 'center',
               alignItems: 'center',
-              width: '460px',
-              height: '220px',
+              width: '500px',
+              height: '250px',
               border: '5px solid red',
               backgroundColor: 'black',
               color: 'white',
