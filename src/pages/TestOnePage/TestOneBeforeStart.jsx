@@ -132,7 +132,7 @@ const Instruction = styled.div`
   justify-content: center;
   align-items: center;
   width: 400px;
-  height: 400px;
+  height: 450px;
   margin: 10px 0px;
   padding: 50px;
   border-radius: 5px;

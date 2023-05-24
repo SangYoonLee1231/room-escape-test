@@ -243,6 +243,7 @@ const QuestionNum = styled.div`
   border-radius: 5px;
   background-color: black;
   color: #ecefef;
+  font-size: large;
   font-family: 'SEBANG_Gothic';
 `;
 
