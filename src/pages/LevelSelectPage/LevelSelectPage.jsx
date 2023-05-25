@@ -11,25 +11,44 @@ const LevelSelctPage = () => {
   return (
     <MainBody>
       <InstructionInfo>📝 응시할 시험을 선택해주세요</InstructionInfo>
-      <TestOneButton onClick={moveToTestOne}>
+      <TestButton onClick={moveToTestOne}>
         {/* ＜＜ ＞＞ */}
         <Text fontSize="larger" fontStyle="SEBANG_Gothic" marginBottom="20px">
           📌 기초 역량 테스트
         </Text>
-        <TestOneInfo>
+        <TestInfo>
           <Text fontSize="14px">
             방탈출 문제 해결 능력을 평가하는 가장 베이직한 시험
           </Text>
           <Text fontSize="13px">
-            (기본기를 바탕으로 문제를 빠르고 정확하게 해결하는 것이 관건)
+            (방탈출 및 미궁 게임의 빈출 소재를 바탕으로한 문제들로 구성)
           </Text>
           <Text fontSize="3px" />
           <Text fontSize="12px">
             ▸ 추천 대상 : 모든 인원 (초보자에게 특히 추천)
           </Text>
-          <Text fontSize="12px">▸ 문제 수 : 20문제 / 제한시간: 15분</Text>
-        </TestOneInfo>
-      </TestOneButton>
+          <Text fontSize="12px">▸ 문제 수 : 20문제 / 제한시간: 30분</Text>
+        </TestInfo>
+      </TestButton>
+      <TestButton onClick={moveToTestOne}>
+        {/* ＜＜ ＞＞ */}
+        <Text fontSize="larger" fontStyle="SEBANG_Gothic" marginBottom="20px">
+          📌 고수 테스트
+        </Text>
+        <TestInfo>
+          <Text fontSize="14px">
+            난이도가 중급 이상인 문제들이 대부분인, 숙련자들을 위한 시험
+          </Text>
+          <Text fontSize="13px">
+            (최소한의 가이드만 제공. 다양한 문제를 풀어본 경험이 요구됨)
+          </Text>
+          <Text fontSize="3px" />
+          <Text fontSize="12px">
+            ▸ 추천 대상 : 방탈출 혹은 미궁 게임 클리어 유경험자
+          </Text>
+          <Text fontSize="12px">▸ 문제 수 : 15문제 / 제한시간: 50분</Text>
+        </TestInfo>
+      </TestButton>
     </MainBody>
   );
 };
@@ -57,7 +76,7 @@ const InstructionInfo = styled.div`
   font-size: 32px;
 `;
 
-const TestOneButton = styled.button`
+const TestButton = styled.button`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -65,6 +84,7 @@ const TestOneButton = styled.button`
   width: 430px;
   height: 230px;
   /* border: 1px solid black; */
+  margin: 20px 0px;
   border-radius: 5px;
   font-size: x-large;
   background-color: #50505e;
@@ -78,7 +98,7 @@ const TestOneButton = styled.button`
   }
 `;
 
-const TestOneInfo = styled.div`
+const TestInfo = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -55,7 +55,7 @@ const TestOneBeforeStart = () => {
   return (
     <MainBody>
       <HeaderArea>
-        <Timer>15:00</Timer>
+        <Timer>30:00</Timer>
       </HeaderArea>
       {/* <Instruction src="./images/etc/before-start-test.png" /> */}
       <Instruction>

@@ -47,16 +47,20 @@ const ResultPage = () => {
   ];
 
   const rank = [
-    ['S', '100점'],
-    ['A+', '90~99점'],
-    ['A', '80~89점'],
-    ['B+', '70~79점'],
-    ['B', '55~69점'],
-    ['C+', '40~54점'],
-    ['C', '30~39점'],
-    ['D+', '20~29점'],
-    ['D', '10~19점'],
-    ['F', '0~9점'],
+    ['S', '100점', '고수'],
+    '',
+    ['A+', '90~99점', '-'],
+    ['A', '80~89점', '잘하심'],
+    ['A-', '70~79점', '-'],
+    '',
+    ['B+', '55~69점', '중수'],
+    ['B', '40~54점', '성장 중'],
+    '',
+    ['C+', '30~39점', '초보'],
+    ['C', '20~29점', '-'],
+    ['D', '10~19점', '경험 더 필요'],
+    '',
+    ['F', '0~9점', '낙제'],
   ];
 
   const calcScore = () => {
@@ -75,15 +79,15 @@ const ResultPage = () => {
     } else if (score >= 80 && score <= 89) {
       setTestRank('A');
     } else if (score >= 70 && score <= 79) {
-      setTestRank('B+');
+      setTestRank('A-');
     } else if (score >= 55 && score <= 69) {
-      setTestRank('B');
+      setTestRank('B+');
     } else if (score >= 40 && score <= 54) {
-      setTestRank('C+');
+      setTestRank('B');
     } else if (score >= 30 && score <= 39) {
-      setTestRank('C');
+      setTestRank('C+');
     } else if (score >= 20 && score <= 29) {
-      setTestRank('D+');
+      setTestRank('C');
     } else if (score >= 10 && score <= 19) {
       setTestRank('D');
     } else {
@@ -101,6 +105,8 @@ const ResultPage = () => {
         <InstructionTitle>▶︎ 테스트 결과 ◀︎</InstructionTitle>
         <InstructionList />
         <ul>
+          <InstructionList fontSize="50px">👏🏻</InstructionList>
+          <InstructionList />
           <InstructionList fontSize="18px">수고하셨습니다.</InstructionList>
           <InstructionList fontSize="18px">
             {nickname}님의 '기초 역량 테스트' 점수는 {testScore}
@@ -128,12 +134,14 @@ const ResultPage = () => {
             </ResultTable>
             <InstructionTitle>■ 등급표 ■</InstructionTitle>
             <RankTable>
-              <th>점수</th>
               <th>등급</th>
+              <th>점수</th>
+              <th>평가</th>
               {rank.map((value, index) => (
                 <tr key={index}>
                   <td>{value[0]}</td>
                   <td>{value[1]}</td>
+                  <td>{value[2]}</td>
                 </tr>
               ))}
             </RankTable>
@@ -155,20 +163,38 @@ const ResultPage = () => {
         <InstructionList />
         <InstructionList />
         <InstructionList>
-          해설이 궁금하시거나 제작자를 후원하고 싶으신 분들은
+          문제의 풀이가 궁금하신 분들을 위해 해설 답안을 제공합니다.
         </InstructionList>
-        <InstructionList>아래의 버튼을 클릭해주세요.</InstructionList>
-        <ExplanationBtn href="/">해설 보러 가기</ExplanationBtn>
-        <ExplanationBtn href="/">제작자 후원하기</ExplanationBtn>
+        {/* <InstructionList>아래의 버튼을 클릭해주세요.</InstructionList> */}
+        <ExplanationBtn
+          onClick={() => {
+            window.open(
+              'https://superb-ranunculus-46a.notion.site/913536920aca4b0d96804336d2cc85a1'
+            );
+          }}
+          target="_blank"
+        >
+          해설 보러 가기
+        </ExplanationBtn>
         <InstructionList />
         <InstructionList />
         <InstructionList>
-          시험에 관하여 혹시 제작자에게 문의드리고 싶은 것이 있다면
+          혹시 시험에 관하여 제작자에게 문의드리고 싶은 것이 있다면
         </InstructionList>
         <InstructionList>
-          아래의 버튼을 통해 일대일 오픈채팅창을 이용해주시기 바랍니다.
+          일대일 오픈채팅창을 이용해주시기 바랍니다.
         </InstructionList>
         <ExplanationBtn href="/">오픈채팅방 바로가기</ExplanationBtn>
+        <InstructionList />
+        <InstructionList />
+        <InstructionList>
+          또한, 제작자의 다른 작품을 플레이해보고 싶거나
+        </InstructionList>
+        <InstructionList>
+          제작자를 후원해주시고 싶으신 분들은 아래 버튼을 클릭해주세요.
+        </InstructionList>
+        <ExplanationBtn href="/">제작자의 다른 작품 보러 가기</ExplanationBtn>
+        <ExplanationBtn href="/">제작자 후원하기</ExplanationBtn>
         <InstructionList />
         <InstructionList />
         <InstructionList>플레이 해주셔서 감사드립니다.</InstructionList>
@@ -240,7 +266,7 @@ const Instruction = styled.div`
   justify-content: center;
   align-items: center;
   width: 500px;
-  height: 1900px;
+  height: 2100px;
   margin: 10px 0px;
   border-radius: 5px;
   background-color: white;
