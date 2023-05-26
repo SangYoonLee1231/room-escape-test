@@ -66,7 +66,7 @@ const ResultPage = () => {
   const calcScore = () => {
     let score = 0;
     for (let i = 0; i < 20; i++) {
-      if (answersheet[i] === answer[i]) {
+      if (answersheet[i].toUpperCase() === answer[i]) {
         score += 5;
       }
     }
