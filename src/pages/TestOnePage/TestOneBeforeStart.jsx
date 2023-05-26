@@ -78,9 +78,14 @@ const TestOneBeforeStart = () => {
             ⁃ 시험 시작 전, 종이와 펜을 미리 준비해주시면 문제 풀이가 좀 더
             수월할 것입니다.
           </InstructionList>
+          <InstructionList />
+          <InstructionList />
           <InstructionList>
             ⁃ 문제를 풀 때, 다른 번호의 문제를 참고해서 풀어야 하는 경우가
             있음을 미리 밝힙니다.
+          </InstructionList>
+          <InstructionList>
+            ⁃ 숫자 형태를 제외한 모든 답은 사전에 등재된 말이 되는 단어입니다.
           </InstructionList>
           <InstructionList>
             ⁃ 시험이 진행되는 도중에는 새로고침을 하거나 페이지를 이탈하지
@@ -138,7 +143,7 @@ const Instruction = styled.div`
   justify-content: center;
   align-items: center;
   width: 400px;
-  height: 530px;
+  height: 600px;
   margin: 10px 0px;
   padding: 50px;
   border-radius: 5px;

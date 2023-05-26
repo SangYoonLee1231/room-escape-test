@@ -173,7 +173,9 @@ const ResultPage = () => {
         <InstructionList>
           문제의 풀이가 궁금하신 분들을 위해 해설 답안을 제공합니다.
         </InstructionList>
-        {/* <InstructionList>아래의 버튼을 클릭해주세요.</InstructionList> */}
+        <InstructionList>
+          (해설이 보이기까지 시간이 꽤 소요될 수 있습니다.)
+        </InstructionList>
         <ExplanationBtn
           onClick={() => {
             window.open(
