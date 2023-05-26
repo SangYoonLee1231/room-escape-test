@@ -28,10 +28,10 @@ const LevelSelctPage = () => {
           <Text fontSize="12px">▸ 문제 수 : 20문제 / 제한시간: 30분</Text>
         </TestInfo>
       </TestButton>
-      <TestButton onClick={moveToTestOne}>
+      <TestButton>
         {/* ＜＜ ＞＞ */}
         <Text fontSize="larger" fontStyle="SEBANG_Gothic" marginBottom="20px">
-          📌 고수 테스트
+          📌 고수 테스트 (준비중)
         </Text>
         <TestInfo>
           <Text fontSize="14px">
