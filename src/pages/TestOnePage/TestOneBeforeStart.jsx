@@ -59,7 +59,7 @@ const TestOneBeforeStart = () => {
       </HeaderArea>
       {/* <Instruction src="./images/etc/before-start-test.png" /> */}
       <Instruction>
-        <InstructionTitle>■ 시험 전 유의사항 (필독)</InstructionTitle>
+        <InstructionTitle>■ 시험 전 유의사항 (필독)■</InstructionTitle>
         <ul>
           <InstructionList>
             ⁃ 답은 반드시 답안지에 기입해주시기 바랍니다.

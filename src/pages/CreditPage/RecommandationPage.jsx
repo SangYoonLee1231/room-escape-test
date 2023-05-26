@@ -4,62 +4,27 @@ import styled from 'styled-components';
 
 const RecommandationPage = () => {
   // 페이지 이동 Hook
-  const navigate = useNavigate();
-  const moveToTestOne = () => {
-    const nickname = inputNickname;
-    navigate(`/test-one`, {
-      state: {
-        nickname: nickname || '학생',
-      },
-    });
-  };
-
-  // 답안지 작성 내용 관리 Hook
-  const [inputNickname, setInputNickname] = useState('');
-
-  // useEffect(() => {}, [inputNickName]);
-
-  // 새로고침 방지 Hook
-  useEffect(() => {
-    const handleBeforeUnload = event => {
-      event.preventDefault();
-      // 사용자에게 표시할 메시지
-      event.returnValue =
-        '새로고침은 부정행위입니다. 저는 여러분의 양심을 믿습니다.';
-    };
-
-    const handleRefresh = event => {
-      event.preventDefault();
-      // 사용자에게 표시할 메시지
-      const confirmationMessage =
-        '새로고침은 부정행위입니다. 저는 여러분의 양심을 믿습니다.';
-      event.returnValue = confirmationMessage;
-      return confirmationMessage;
-    };
-
-    window.addEventListener('beforeunload', handleBeforeUnload);
-    window.addEventListener('unload', handleRefresh);
-
-    return () => {
-      window.removeEventListener('beforeunload', handleBeforeUnload);
-      window.removeEventListener('unload', handleRefresh);
-    };
-  }, []);
+  // const navigate = useNavigate();
+  // const moveToBack = () => {
+  //   const nickname = inputNickname;
+  //   navigate(`/test-one`, {
+  //     state: {
+  //       nickname: nickname || '학생',
+  //     },
+  //   });
+  // };
 
   // 답안지 작성 관리 함수
-  const handleChange = event => {
-    const newInputNickname = event.target.value;
-    setInputNickname(newInputNickname);
-  };
+  // const handleChange = event => {
+  //   const newInputNickname = event.target.value;
+  //   setInputNickname(newInputNickname);
+  // };
 
   return (
     <MainBody>
-      <HeaderArea>
-        <Timer>30:00</Timer>
-      </HeaderArea>
-      {/* <Instruction src="./images/etc/before-start-test.png" /> */}
+      <HeaderArea />
       <Instruction>
-        <InstructionTitle>■ 시험 전 유의사항 (필독)</InstructionTitle>
+        <InstructionTitle>■ 제작자 SYL 작품 ■</InstructionTitle>
         <ul>
           <InstructionList>
             ⁃ 답은 반드시 답안지에 기입해주시기 바랍니다.
@@ -86,11 +51,7 @@ const RecommandationPage = () => {
       <FooterArea>
         <NicknameBar>
           <NicknameSpan>아래에 이름 혹은 닉네임을 기입해주세요</NicknameSpan>
-          <NickNameInput onChange={event => handleChange(event)} />
         </NicknameBar>
-        <BtnArea>
-          <AnswerSheetBtn onClick={moveToTestOne}>시험 시작</AnswerSheetBtn>
-        </BtnArea>
       </FooterArea>
     </MainBody>
   );
@@ -111,19 +72,6 @@ const HeaderArea = styled.div`
   align-items: space-between;
   margin-top: 10vh;
   margin-bottom: 15px;
-`;
-
-const Timer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 400px;
-  height: 50px;
-  border-radius: 5px;
-  background-color: black;
-  color: #ecefef;
-  font-family: 'SEBANG_Gothic';
-  font-size: x-large;
 `;
 
 const Instruction = styled.div`
@@ -174,33 +122,33 @@ const NicknameSpan = styled.span`
   font-family: 'paybooc';
 `;
 
-const NickNameInput = styled.input`
-  width: 200px;
-  margin: 10px 10px;
-  border: none;
-  border-bottom: 1px solid black;
-  font-size: 15px;
-  text-align: center;
-  &:focus {
-    outline: none;
-  }
-`;
+// const NickNameInput = styled.input`
+//   width: 200px;
+//   margin: 10px 10px;
+//   border: none;
+//   border-bottom: 1px solid black;
+//   font-size: 15px;
+//   text-align: center;
+//   &:focus {
+//     outline: none;
+//   }
+// `;
 
-const BtnArea = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
+// const BtnArea = styled.div`
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// `;
 
-const AnswerSheetBtn = styled.button`
-  width: 230px;
-  height: 40px;
-  margin: 0px 10px;
-  font-size: medium;
-  transition: transform 0.1s ease-in-out;
-  &:hover {
-    transform: scale(1.05);
-  }
-`;
+// const AnswerSheetBtn = styled.button`
+//   width: 230px;
+//   height: 40px;
+//   margin: 0px 10px;
+//   font-size: medium;
+//   transition: transform 0.1s ease-in-out;
+//   &:hover {
+//     transform: scale(1.05);
+//   }
+// `;
 
 export default RecommandationPage;
