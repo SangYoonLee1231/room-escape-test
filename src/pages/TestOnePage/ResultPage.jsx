@@ -187,7 +187,7 @@ const ResultPage = () => {
           혹시 시험에 관하여 제작자에게 문의드리고 싶은 것이 있다면
         </InstructionList>
         <InstructionList>
-          일대일 오픈채팅방을 이용해주시기 바랍니다.
+          일대일 오픈채팅방을 이용해주시기를 바랍니다.
         </InstructionList>
         <ExplanationBtn
           onClick={() => {
