@@ -9,7 +9,7 @@ const TestOnePage = () => {
   // 닉네임 정보 받아오기
   const location = useLocation();
 
-  const nickname = location.state.nickname;
+  const nickname = location.state ? location.state.nickname || '학생' : '학생';
 
   // 페이지 이동 Hook
   const navigate = useNavigate();
@@ -18,7 +18,7 @@ const TestOnePage = () => {
     navigate(`/test-one-result`, {
       state: {
         answersheet: data || '',
-        nickname: nickname || '',
+        nickname: nickname || '학생',
       },
     });
   };
@@ -256,12 +256,6 @@ const QuestionNum = styled.div`
 `;
 
 const Question = styled.img``;
-
-const BlackScreen = styled.div`
-  background-color: black;
-  width: 400px;
-  height: 400px;
-`;
 
 const FooterArea = styled.div`
   display: flex;

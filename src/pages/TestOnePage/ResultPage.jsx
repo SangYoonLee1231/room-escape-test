@@ -14,8 +14,14 @@ const ResultPage = () => {
     calcScore();
   }, [testScore]);
 
-  const answersheet = JSON.parse(location.state.answersheet);
-  const nickname = location.state.nickname;
+  const tempArray = Array.from({ length: 20 }, () => '.');
+
+  const answersheet = JSON.parse(
+    location.state
+      ? location.state.answersheet || JSON.stringify(tempArray)
+      : JSON.stringify(tempArray)
+  );
+  const nickname = location.state ? location.state.nickname || '학생' : '학생';
   // console.log(answersheet);
   // console.log(nickname);
 

@@ -13,7 +13,7 @@ const StartPage = () => {
       <TitleImage />
       <SubTitle>
         <Text fontSize="large">방탈출 초보부터 고수까지</Text>
-        <Text fontSize="large">모두를 위한 방탈출 능력 테스트</Text>
+        <Text fontSize="large">모두를 위한 방탈출 능력 미니 테스트</Text>
         {/* <Text>Made by SYL</Text> */}
       </SubTitle>
       <StartButton onClick={onAboutClick}>START</StartButton>
