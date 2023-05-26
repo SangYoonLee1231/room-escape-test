@@ -65,6 +65,10 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
+  a {
+    color: gray;
+  }
+
   a:hover, a:visited, a:link, a:active {
       text-decoration: none;
   }

@@ -18,16 +18,13 @@ const LevelSelctPage = () => {
         </Text>
         <TestInfo>
           <Text fontSize="14px">
-            방탈출 문제 해결 능력을 평가하는 가장 베이직한 시험
-          </Text>
-          <Text fontSize="13px">
-            (방탈출 및 미궁 게임의 빈출 소재를 바탕으로한 문제들로 구성)
+            방탈출 및 미궁 게임의 빈출 유형으로 구성된 '기본기 테스트'
           </Text>
           <Text fontSize="3px" />
           <Text fontSize="12px">
             ▸ 추천 대상 : 모든 인원 (초보자에게 특히 추천)
           </Text>
-          <Text fontSize="12px">▸ 문제 수 : 20문제 / 제한시간: 30분</Text>
+          <Text fontSize="12px">▸ 문제 수 : 20문제 / 제한시간: 20분</Text>
         </TestInfo>
       </TestButton>
       <TestButton onClick={moveToTestOne}>

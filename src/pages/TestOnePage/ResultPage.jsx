@@ -132,7 +132,7 @@ const ResultPage = () => {
                 </tr>
               ))}
             </ResultTable>
-            <InstructionTitle>■ 등급표 ■</InstructionTitle>
+            <InstructionTitle>■ '기초 역량 테스트' 등급표 ■</InstructionTitle>
             <RankTable>
               <th>등급</th>
               <th>점수</th>
@@ -182,9 +182,16 @@ const ResultPage = () => {
           혹시 시험에 관하여 제작자에게 문의드리고 싶은 것이 있다면
         </InstructionList>
         <InstructionList>
-          일대일 오픈채팅창을 이용해주시기 바랍니다.
+          일대일 오픈채팅방을 이용해주시기 바랍니다.
         </InstructionList>
-        <ExplanationBtn href="/">오픈채팅방 바로가기</ExplanationBtn>
+        <ExplanationBtn
+          onClick={() => {
+            window.open('https://open.kakao.com/o/sAFqQtae');
+          }}
+          target="_blank"
+        >
+          오픈채팅방 바로가기
+        </ExplanationBtn>
         <InstructionList />
         <InstructionList />
         <InstructionList>
@@ -194,7 +201,14 @@ const ResultPage = () => {
           제작자를 후원해주시고 싶으신 분들은 아래 버튼을 클릭해주세요.
         </InstructionList>
         <ExplanationBtn href="/">제작자의 다른 작품 보러 가기</ExplanationBtn>
-        <ExplanationBtn href="/">제작자 후원하기</ExplanationBtn>
+        <ExplanationBtn
+          onClick={() => {
+            window.open('');
+          }}
+          target="_blank"
+        >
+          제작자 후원하기
+        </ExplanationBtn>
         <InstructionList />
         <InstructionList />
         <InstructionList>플레이 해주셔서 감사드립니다.</InstructionList>

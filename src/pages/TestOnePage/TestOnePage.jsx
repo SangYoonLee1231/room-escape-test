@@ -25,7 +25,7 @@ const TestOnePage = () => {
 
   // 타이머 설정 코드 - useState Hook
   const [quizNum, setQuizNum] = useState(1);
-  const [timeRemain, setTimeRemain] = useState(1800);
+  const [timeRemain, setTimeRemain] = useState(1200);
 
   // 모달 창 Hook
   const [isOpen, setIsOpen] = useState(false);
@@ -55,16 +55,14 @@ const TestOnePage = () => {
   useEffect(() => {
     const handleBeforeUnload = event => {
       // 사용자에게 표시할 메시지
-      event.returnValue =
-        '새로고침은 부정행위입니다. 저는 여러분의 양심을 믿습니다.';
       event.preventDefault();
+      event.returnValue = '';
     };
 
     const handleRefresh = event => {
       event.preventDefault();
       // 사용자에게 표시할 메시지
-      const confirmationMessage =
-        '새로고침은 부정행위입니다. 저는 여러분의 양심을 믿습니다.';
+      const confirmationMessage = '';
       event.returnValue = confirmationMessage;
       return confirmationMessage;
     };
@@ -75,6 +73,18 @@ const TestOnePage = () => {
     return () => {
       window.removeEventListener('beforeunload', handleBeforeUnload);
       window.removeEventListener('unload', handleRefresh);
+    };
+  }, []);
+
+  // 뒤로가기 막는 코드
+  useEffect(() => {
+    // eslint-disable-next-line no-restricted-globals
+    history.pushState(null, '', ''); // 현재 페이지 history stack 한개 더 쌓기
+    window.onpopstate = () => {
+      // 뒤로가기가 실행될 경우 추가 action 등록
+      alert(
+        '시험을 마치지 않고 퇴실하시겠습니까? 뒤로가기를 한 번 더 눌러주세요.'
+      );
     };
   }, []);
 

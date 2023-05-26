@@ -6,6 +6,7 @@ import TestOnePage from './pages/TestOnePage/TestOnePage';
 import ResultPage from './pages/TestOnePage/ResultPage';
 import TestOneBeforeStart from './pages/TestOnePage/TestOneBeforeStart';
 import Root from './Root';
+import RecommandationPage from './pages/CreditPage/RecommandationPage';
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,12 @@ const router = createBrowserRouter([
         path: 'test-one-result',
         element: (
           <ResultPage />
+        ) /* Root의 Outlet이 LevelSelectPage 컴포넌트로 대체 */,
+      },
+      {
+        path: 'syl-works',
+        element: (
+          <RecommandationPage />
         ) /* Root의 Outlet이 LevelSelectPage 컴포넌트로 대체 */,
       },
     ],
