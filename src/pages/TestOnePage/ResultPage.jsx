@@ -101,7 +101,7 @@ const ResultPage = () => {
         <Timer>00:00</Timer>
       </HeaderArea>
       {/* <Instruction src="./images/etc/before-start-test.png" /> */}
-      <Instruction>
+      <Instruction height="1500px">
         <InstructionTitle>▶︎ 테스트 결과 ◀︎</InstructionTitle>
         <InstructionList />
         <ul>
@@ -162,6 +162,8 @@ const ResultPage = () => {
         </ul>
         <InstructionList />
         <InstructionList />
+      </Instruction>
+      <Instruction height="1000px" fontColor="black">
         <InstructionList>
           문제의 풀이가 궁금하신 분들을 위해 해설 답안을 제공합니다.
         </InstructionList>
@@ -178,6 +180,9 @@ const ResultPage = () => {
         </ExplanationBtn>
         <InstructionList />
         <InstructionList />
+        <hr width="400px" />
+        <InstructionList />
+        <InstructionList />
         <InstructionList>
           혹시 시험에 관하여 제작자에게 문의드리고 싶은 것이 있다면
         </InstructionList>
@@ -192,6 +197,9 @@ const ResultPage = () => {
         >
           오픈채팅방 바로가기
         </ExplanationBtn>
+        <InstructionList />
+        <InstructionList />
+        <hr width="400px" />
         <InstructionList />
         <InstructionList />
         <InstructionList>
@@ -224,8 +232,10 @@ const ResultPage = () => {
         </InstructionList>
         <InstructionList />
         <InstructionList />
-        <InstructionList>플레이 해주셔서 감사드립니다.</InstructionList>
+        <hr width="400px" />
         <InstructionList />
+        <InstructionList />
+        <InstructionList>◆ 플레이 해주셔서 감사드립니다. ◆</InstructionList>
         <InstructionList />
       </Instruction>
       <FooterArea>
@@ -293,10 +303,11 @@ const Instruction = styled.div`
   justify-content: center;
   align-items: center;
   width: 500px;
-  height: 2200px;
-  margin: 10px 0px;
+  height: ${props => props.height || '1100px'};
+  margin: 10px 0px 100px 0px;
   border-radius: 5px;
-  background-color: white;
+  background-color: ${props => props.bgColor || 'white'};
+  color: ${props => props.fontColor || 'black'};
   font-family: 'paybooc';
   animation: ${ResultFadeIn} 2s linear;
   &.ul.li {
