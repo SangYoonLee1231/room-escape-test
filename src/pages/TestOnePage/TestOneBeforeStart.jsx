@@ -59,8 +59,10 @@ const TestOneBeforeStart = () => {
       </HeaderArea>
       {/* <Instruction src="./images/etc/before-start-test.png" /> */}
       <Instruction>
-        <InstructionTitle>■ 시험 전 유의사항 (필독)■</InstructionTitle>
+        <InstructionTitle>■ 시험 전 유의사항 (필독!!)■</InstructionTitle>
         <ul>
+          <InstructionList />
+          <InstructionList />
           <InstructionList>
             ⁃ 답은 반드시 답안지에 기재해주시기 바랍니다.
           </InstructionList>
@@ -73,8 +75,12 @@ const TestOneBeforeStart = () => {
             시험 결과가 발표됩니다. 채점 시 영어 대소문자는 구분하지 않습니다.
           </InstructionList>
           <InstructionList>
-            ⁃ 시험 시작 전, 종이와 펜을 미리 준비해주시기를 바랍니다. 반드시
-            필요한 것은 아니지만, 만일 있다면 문제 풀이가 좀 더 수월할 것입니다.
+            ⁃ 시험 시작 전, 종이와 펜을 미리 준비해주시면 문제 풀이가 좀 더
+            수월할 것입니다.
+          </InstructionList>
+          <InstructionList>
+            ⁃ 문제를 풀 때, 다른 번호의 문제를 참고해서 풀어야 하는 경우가
+            있음을 미리 밝힙니다.
           </InstructionList>
           <InstructionList>
             ⁃ 시험이 진행되는 도중에는 새로고침을 하거나 페이지를 이탈하지
@@ -132,7 +138,7 @@ const Instruction = styled.div`
   justify-content: center;
   align-items: center;
   width: 400px;
-  height: 450px;
+  height: 530px;
   margin: 10px 0px;
   padding: 50px;
   border-radius: 5px;
