@@ -55,7 +55,7 @@ const TestOneBeforeStart = () => {
   return (
     <MainBody>
       <HeaderArea>
-        <Timer>20:00</Timer>
+        <Timer>30:00</Timer>
       </HeaderArea>
       {/* <Instruction src="./images/etc/before-start-test.png" /> */}
       <Instruction>
@@ -65,7 +65,7 @@ const TestOneBeforeStart = () => {
             ⁃ 답은 반드시 답안지에 기입해주시기 바랍니다.
           </InstructionList>
           <InstructionList>
-            ⁃ 제한 시간은 20분, 총 문제 수는 20문제이며, 배점은 문제 당
+            ⁃ 제한 시간은 30분, 총 문제 수는 20문제이며, 배점은 문제 당
             5점입니다.
           </InstructionList>
           <InstructionList>

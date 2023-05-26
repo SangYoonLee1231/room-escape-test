@@ -20,7 +20,7 @@ const ResultPage = () => {
   // console.log(nickname);
 
   const moveToStartPage = () => {
-    navigate('/start');
+    navigate('/');
   };
 
   const answer = [
@@ -37,7 +37,7 @@ const ResultPage = () => {
     '시계',
     '마구간',
     '사과',
-    'VIVA',
+    '특급',
     '160',
     '바구니',
     '527',
@@ -198,17 +198,30 @@ const ResultPage = () => {
           또한, 제작자의 다른 작품을 플레이해보고 싶거나
         </InstructionList>
         <InstructionList>
-          제작자를 후원해주시고 싶으신 분들은 아래 버튼을 클릭해주세요.
+          작품이 마음에 들어 제작자를 후원하고 싶으신 분들은
         </InstructionList>
-        <ExplanationBtn href="/">제작자의 다른 작품 보러 가기</ExplanationBtn>
+        <InstructionList>아래 버튼을 클릭해주세요.</InstructionList>
         <ExplanationBtn
           onClick={() => {
-            window.open('');
+            window.open(
+              'https://superb-ranunculus-46a.notion.site/cb0658883e874aa6b9414d8da7c8aefa'
+            );
+          }}
+          target="_blank"
+        >
+          제작자의 다른 작품 보러 가기
+        </ExplanationBtn>
+        <ExplanationBtn
+          onClick={() => {
+            window.open('https://toss.me/syl1231');
           }}
           target="_blank"
         >
           제작자 후원하기
         </ExplanationBtn>
+        <InstructionList>
+          여러분의 후원은 제가 더 좋은 작품을 만드는 동기로 삼겠습니다.
+        </InstructionList>
         <InstructionList />
         <InstructionList />
         <InstructionList>플레이 해주셔서 감사드립니다.</InstructionList>
@@ -280,7 +293,7 @@ const Instruction = styled.div`
   justify-content: center;
   align-items: center;
   width: 500px;
-  height: 2100px;
+  height: 2200px;
   margin: 10px 0px;
   border-radius: 5px;
   background-color: white;
@@ -364,6 +377,7 @@ const GoToFirstBtn = styled.button`
   margin: 0px 10px;
   font-size: large;
   transition: transform 0.1s ease-in-out;
+  animation: ${ResultFadeIn} 2s linear;
   &:hover {
     transform: scale(1.05);
   }

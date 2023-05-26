@@ -6,7 +6,6 @@ import TestOnePage from './pages/TestOnePage/TestOnePage';
 import ResultPage from './pages/TestOnePage/ResultPage';
 import TestOneBeforeStart from './pages/TestOnePage/TestOneBeforeStart';
 import Root from './Root';
-import RecommandationPage from './pages/CreditPage/RecommandationPage';
 
 const router = createBrowserRouter([
   {
@@ -20,12 +19,12 @@ const router = createBrowserRouter([
         //   <ErrorComponent />
         // ) /* Home 컴포넌트에서 에러 발생시 ErrorComponent를 render 한다 (여기서 다른 컴포넌트로 이동 가능) */,
       },
-      {
-        path: 'instruction',
-        element: (
-          <InstructionPage />
-        ) /* Root의 Outlet이 StartPage 컴포넌트로 대체 */,
-      },
+      // {
+      //   path: 'instruction',
+      //   element: (
+      //     <InstructionPage />
+      //   ) /* Root의 Outlet이 StartPage 컴포넌트로 대체 */,
+      // },
       {
         path: 'level-select',
         element: (
@@ -48,12 +47,6 @@ const router = createBrowserRouter([
         path: 'test-one-result',
         element: (
           <ResultPage />
-        ) /* Root의 Outlet이 LevelSelectPage 컴포넌트로 대체 */,
-      },
-      {
-        path: 'syl-works',
-        element: (
-          <RecommandationPage />
         ) /* Root의 Outlet이 LevelSelectPage 컴포넌트로 대체 */,
       },
     ],

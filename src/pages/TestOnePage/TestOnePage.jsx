@@ -25,7 +25,7 @@ const TestOnePage = () => {
 
   // 타이머 설정 코드 - useState Hook
   const [quizNum, setQuizNum] = useState(1);
-  const [timeRemain, setTimeRemain] = useState(1200);
+  const [timeRemain, setTimeRemain] = useState(1800);
 
   // 모달 창 Hook
   const [isOpen, setIsOpen] = useState(false);
@@ -82,9 +82,7 @@ const TestOnePage = () => {
     history.pushState(null, '', ''); // 현재 페이지 history stack 한개 더 쌓기
     window.onpopstate = () => {
       // 뒤로가기가 실행될 경우 추가 action 등록
-      alert(
-        '시험을 마치지 않고 퇴실하시겠습니까? 뒤로가기를 한 번 더 눌러주세요.'
-      );
+      alert('뒤로가기 방지용 알람입니다.');
     };
   }, []);
 

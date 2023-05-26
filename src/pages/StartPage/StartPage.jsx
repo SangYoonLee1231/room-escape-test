@@ -5,7 +5,7 @@ import styled, { keyframes } from 'styled-components';
 const StartPage = () => {
   const navigate = useNavigate();
   const onAboutClick = () => {
-    navigate('/instruction');
+    navigate('/level-select');
   };
 
   return (
