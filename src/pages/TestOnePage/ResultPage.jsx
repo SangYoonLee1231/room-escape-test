@@ -53,20 +53,20 @@ const ResultPage = () => {
   ];
 
   const rank = [
-    ['S', '100점', '고수'],
+    ['S', '100점', '고수 후보생'],
     '',
-    ['A+', '90~99점', '매우 잘함'],
-    ['A', '80~89점', '꽤 잘함'],
-    ['A-', '70~79점', '좀 잘함'],
+    ['A+', '90~99점', '꽤 잘하심'],
+    ['A', '80~89점', '잘하심'],
     '',
-    ['B+', '55~69점', '중수'],
-    ['B', '40~54점', '성장 중'],
+    ['B+', '70~79점', '중수'],
+    ['B', '55~69점', '성장 중'],
     '',
-    ['C+', '30~39점', '초보'],
-    ['C', '20~29점', '왕초보'],
-    ['D', '10~19점', '경험 더 필요'],
+    ['C+', '40~54점', '초보'],
+    ['C', '30~39점', '왕초보'],
     '',
-    ['F', '0~9점', '낙제'],
+    ['D', '20~29점', '경험 더 필요'],
+    '',
+    ['F', '0~19점', '낙제'],
   ];
 
   const calcScore = () => {
@@ -85,16 +85,14 @@ const ResultPage = () => {
     } else if (score >= 80 && score <= 89) {
       setTestRank('A');
     } else if (score >= 70 && score <= 79) {
-      setTestRank('A-');
-    } else if (score >= 55 && score <= 69) {
       setTestRank('B+');
-    } else if (score >= 40 && score <= 54) {
+    } else if (score >= 55 && score <= 69) {
       setTestRank('B');
-    } else if (score >= 30 && score <= 39) {
+    } else if (score >= 40 && score <= 54) {
       setTestRank('C+');
-    } else if (score >= 20 && score <= 29) {
+    } else if (score >= 30 && score <= 39) {
       setTestRank('C');
-    } else if (score >= 10 && score <= 19) {
+    } else if (score >= 20 && score <= 29) {
       setTestRank('D');
     } else {
       setTestRank('F');
@@ -107,7 +105,7 @@ const ResultPage = () => {
         <Timer>00:00</Timer>
       </HeaderArea>
       {/* <Instruction src="./images/etc/before-start-test.png" /> */}
-      <Instruction height="1500px">
+      <Instruction height="1470px">
         <InstructionTitle>▶︎ 테스트 결과 ◀︎</InstructionTitle>
         <InstructionList />
         <ul>
@@ -174,7 +172,7 @@ const ResultPage = () => {
           문제의 풀이가 궁금하신 분들을 위해 해설 답안을 제공합니다.
         </InstructionList>
         <InstructionList>
-          (해설이 보이기까지 시간이 꽤 소요될 수 있습니다.)
+          (해설 사이트 접속까지 시간이 꽤 소요될 수 있습니다.)
         </InstructionList>
         <ExplanationBtn
           onClick={() => {
