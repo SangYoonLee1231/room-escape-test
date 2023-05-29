@@ -25,7 +25,7 @@ const TestTwoPage = () => {
 
   // 타이머 설정 코드 - useState Hook
   const [quizNum, setQuizNum] = useState(1);
-  const [timeRemain, setTimeRemain] = useState(3000);
+  const [timeRemain, setTimeRemain] = useState(1500);
 
   // 모달 창 Hook
   const [isOpen, setIsOpen] = useState(false);
@@ -141,7 +141,10 @@ const TestTwoPage = () => {
       ) : (
         <Question src={`./images/questions/q${quizNum}.png`} />
       )} */}
-      <Question src={`./images/expert_questions/expert_q${quizNum}.png`} />
+      <Question
+        src={`./images/expert_questions/expert_q${quizNum}.png`}
+        width="500px"
+      />
       <FooterArea>
         <QuestionBar>
           <MoveBtn onClick={moveToPrev}>◀︎</MoveBtn>

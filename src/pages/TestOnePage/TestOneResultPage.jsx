@@ -212,9 +212,9 @@ const TestOneResultPage = () => {
           또한, 제작자의 다른 작품을 플레이해보고 싶거나
         </InstructionList>
         <InstructionList>
-          작품이 마음에 들어 제작자를 후원하고 싶으신 분들은
+          제작자를 후원하고 싶으신 분들은 아래 버튼을 클릭해주세요.
         </InstructionList>
-        <InstructionList>아래 버튼을 클릭해주세요.</InstructionList>
+        <InstructionList />
         <ExplanationBtn
           onClick={() => {
             window.open(
@@ -233,6 +233,7 @@ const TestOneResultPage = () => {
         >
           제작자 후원하기
         </ExplanationBtn>
+        <InstructionList />
         <InstructionList>
           여러분의 후원은 제가 더 좋은 작품을 만드는 동기로 삼겠습니다.
         </InstructionList>

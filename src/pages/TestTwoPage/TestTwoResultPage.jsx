@@ -53,18 +53,18 @@ const TestTwoResultPage = () => {
   ];
 
   const rank = [
-    ['S', '100점', '천상계'],
+    ['S', '91~100점', '천상계'],
     '',
-    ['A+', '95~99점', '초초고수'],
-    ['A', '90~94점', '초고수'],
+    ['A+', '86~90점', '초초고수'],
+    ['A', '81~85점', '초고수'],
     '',
     // ['B+', '70~79점', '중수'],
-    ['B', '70~89점', '고수'],
+    ['B', '66~80점', '고수'],
     '',
     // ['C+', '40~54점', '초보'],
-    ['C', '55~69점', '잘하심'],
+    ['C', '51~65점', '잘하심'],
     '',
-    ['D', '40~54점', '경험 더 필요'],
+    ['D', '40~50점', '경험 더 필요'],
     '',
     ['F', '0~39점', '낙제'],
   ];
@@ -72,23 +72,23 @@ const TestTwoResultPage = () => {
   const calcScore = () => {
     let score = 0;
     for (let i = 0; i < 20; i++) {
-      if (answersheet[i].toUpperCase() === answer[i]) {
+      if (answersheet[i].toUpperCase() === answer[i].toUpperCase()) {
         score += 5;
       }
     }
     setTestScore(score);
 
-    if (score === 100) {
+    if (score >= 91 && score <= 100) {
       setTestRank('S');
-    } else if (score >= 95 && score <= 99) {
+    } else if (score >= 86 && score <= 90) {
       setTestRank('A+');
-    } else if (score >= 90 && score <= 94) {
+    } else if (score >= 81 && score <= 85) {
       setTestRank('A');
-    } else if (score >= 70 && score <= 89) {
+    } else if (score >= 66 && score <= 80) {
       setTestRank('B');
-    } else if (score >= 55 && score <= 69) {
+    } else if (score >= 51 && score <= 65) {
       setTestRank('C');
-    } else if (score >= 40 && score <= 54) {
+    } else if (score >= 40 && score <= 50) {
       setTestRank('D');
       // } else if (score >= 30 && score <= 39) {
       //   setTestRank('C');
@@ -132,7 +132,11 @@ const TestTwoResultPage = () => {
                   <td>{index + 1}</td>
                   <td>{value}</td>
                   <td>{answer[index]}</td>
-                  <td>{value.toUpperCase() === answer[index] ? 'O' : 'X'}</td>
+                  <td>
+                    {value.toUpperCase() === answer[index].toUpperCase()
+                      ? 'O'
+                      : 'X'}
+                  </td>
                 </tr>
               ))}
             </ResultTable>
@@ -169,20 +173,18 @@ const TestTwoResultPage = () => {
       </Instruction>
       <Instruction height="1000px" fontColor="black">
         <InstructionList>
-          문제의 풀이가 궁금하신 분들을 위해 해설 답안을 제공합니다.
+          현재 '고수 테스트'의 해설지는 준비 중에 있습니다.
         </InstructionList>
         <InstructionList>
-          (해설 사이트 접속까지 시간이 꽤 소요될 수 있습니다.)
+          해설이 궁금하신 분들은 오픈채팅방으로 문의해주시기 바랍니다.
         </InstructionList>
         <ExplanationBtn
-          onClick={() => {
-            window.open(
-              'https://superb-ranunculus-46a.notion.site/913536920aca4b0d96804336d2cc85a1'
-            );
-          }}
-          target="_blank"
+        // onClick={() => {
+        //   window.open('');
+        // }}
+        // target="_blank"
         >
-          해설 보러 가기
+          해설 보러 가기 (준비중)
         </ExplanationBtn>
         <InstructionList />
         <InstructionList />
@@ -190,10 +192,10 @@ const TestTwoResultPage = () => {
         <InstructionList />
         <InstructionList />
         <InstructionList>
-          혹시 시험에 관하여 제작자에게 문의드리고 싶은 것이 있다면
+          또한, 그 밖에도 제작자에게 문의드리고 싶은 것이 있으시다면
         </InstructionList>
         <InstructionList>
-          일대일 오픈채팅방을 이용해주시기를 바랍니다.
+          언제든 일대일 오픈채팅방의 문을 두드려주시기 바랍니다.
         </InstructionList>
         <ExplanationBtn
           onClick={() => {
@@ -212,9 +214,9 @@ const TestTwoResultPage = () => {
           또한, 제작자의 다른 작품을 플레이해보고 싶거나
         </InstructionList>
         <InstructionList>
-          작품이 마음에 들어 제작자를 후원하고 싶으신 분들은
+          제작자를 후원하고 싶으신 분들은 아래 버튼을 클릭해주세요.
         </InstructionList>
-        <InstructionList>아래 버튼을 클릭해주세요.</InstructionList>
+        <InstructionList />
         <ExplanationBtn
           onClick={() => {
             window.open(
@@ -233,6 +235,7 @@ const TestTwoResultPage = () => {
         >
           제작자 후원하기
         </ExplanationBtn>
+        <InstructionList />
         <InstructionList>
           여러분의 후원은 제가 더 좋은 작품을 만드는 동기로 삼겠습니다.
         </InstructionList>
