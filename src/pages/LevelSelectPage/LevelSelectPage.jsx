@@ -45,7 +45,7 @@ const LevelSelctPage = () => {
           {/* <Text fontSize="12px">
             ▸ 추천 대상 : 방탈출 혹은 미궁 게임 클리어 유경험자
           </Text> */}
-          <Text fontSize="12px">▸ 문제 수 : 20문제 / 제한시간: 40분</Text>
+          <Text fontSize="12px">▸ 문제 수 : 20문제 / 제한시간: 25분</Text>
         </TestInfo>
       </TestButton>
     </MainBody>
