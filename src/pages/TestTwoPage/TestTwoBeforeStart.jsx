@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
-const TestOneBeforeStart = () => {
+const TestTwoBeforeStart = () => {
   // 페이지 이동 Hook
   const navigate = useNavigate();
   const moveToTestOne = () => {
     const nickname = inputNickname;
-    navigate(`/test-one`, {
+    navigate(`/test-two`, {
       state: {
         nickname: nickname || '학생',
       },
@@ -55,7 +55,7 @@ const TestOneBeforeStart = () => {
   return (
     <MainBody>
       <HeaderArea>
-        <Timer>30:00</Timer>
+        <Timer>50:00</Timer>
       </HeaderArea>
       {/* <Instruction src="./images/etc/before-start-test.png" /> */}
       <Instruction>
@@ -67,10 +67,13 @@ const TestOneBeforeStart = () => {
             ⁃ 답은 반드시 답안지에 기재해주시기 바랍니다.
           </InstructionList>
           <InstructionList>
-            ⁃ 제한 시간은 30분, 문제 총수는 20문제이며, 배점은 문제 당
+            ⁃ 제한 시간은 50분, 문제 총수는 20문제이며, 배점은 문제 당
             5점입니다.
           </InstructionList>
-          <InstructionList>⁃ 낙제 커트라인은 20점입니다.</InstructionList>
+          <InstructionList>
+            ⁃ 숙련자를 위한 테스트이므로, 낙제 커트라인이 '기초 역량 테스트'보다
+            높음을 공지합니다. (40점)
+          </InstructionList>
           <InstructionList />
           <InstructionList />
           <InstructionList>
@@ -146,7 +149,7 @@ const Instruction = styled.div`
   justify-content: center;
   align-items: center;
   width: 400px;
-  height: 650px;
+  height: 700px;
   margin: 10px 0px;
   padding: 50px;
   border-radius: 5px;
@@ -217,4 +220,4 @@ const AnswerSheetBtn = styled.button`
   }
 `;
 
-export default TestOneBeforeStart;
+export default TestTwoBeforeStart;

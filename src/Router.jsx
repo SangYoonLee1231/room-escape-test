@@ -1,10 +1,12 @@
 import { createBrowserRouter } from 'react-router-dom';
 import StartPage from './pages/StartPage/StartPage';
-import InstructionPage from './pages/InstructionPage/InstructionPage';
 import LevelSelectPage from './pages/LevelSelectPage/LevelSelectPage';
 import TestOnePage from './pages/TestOnePage/TestOnePage';
-import ResultPage from './pages/TestOnePage/ResultPage';
+import TestOneResultPage from './pages/TestOnePage/TestOneResultPage';
 import TestOneBeforeStart from './pages/TestOnePage/TestOneBeforeStart';
+import TestTwoPage from './pages/TestTwoPage/TestTwoPage';
+import TestTwoResultPage from './pages/TestTwoPage/TestTwoResultPage';
+import TestTwoBeforeStart from './pages/TestTwoPage/TestTwoBeforeStart';
 import Root from './Root';
 
 const router = createBrowserRouter([
@@ -46,7 +48,25 @@ const router = createBrowserRouter([
       {
         path: 'test-one-result',
         element: (
-          <ResultPage />
+          <TestOneResultPage />
+        ) /* Root의 Outlet이 LevelSelectPage 컴포넌트로 대체 */,
+      },
+      {
+        path: 'test-two-before-start',
+        element: (
+          <TestTwoBeforeStart />
+        ) /* Root의 Outlet이 LevelSelectPage 컴포넌트로 대체 */,
+      },
+      {
+        path: 'test-two',
+        element: (
+          <TestTwoPage />
+        ) /* Root의 Outlet이 LevelSelectPage 컴포넌트로 대체 */,
+      },
+      {
+        path: 'test-two-result',
+        element: (
+          <TestTwoResultPage />
         ) /* Root의 Outlet이 LevelSelectPage 컴포넌트로 대체 */,
       },
     ],

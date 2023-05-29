@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
 
-const ResultPage = () => {
+const TestOneResultPage = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -400,4 +400,4 @@ const GoToFirstBtn = styled.button`
   }
 `;
 
-export default ResultPage;
+export default TestOneResultPage;
