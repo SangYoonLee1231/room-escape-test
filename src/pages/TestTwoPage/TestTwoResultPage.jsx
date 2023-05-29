@@ -59,10 +59,10 @@ const TestTwoResultPage = () => {
     ['A', '81~85점', '초고수'],
     '',
     // ['B+', '70~79점', '중수'],
-    ['B', '66~80점', '고수'],
+    ['B', '71~80점', '고수'],
     '',
     // ['C+', '40~54점', '초보'],
-    ['C', '51~65점', '잘하심'],
+    ['C', '51~70점', '잘하심'],
     '',
     ['D', '40~50점', '경험 더 필요'],
     '',
@@ -84,9 +84,9 @@ const TestTwoResultPage = () => {
       setTestRank('A+');
     } else if (score >= 81 && score <= 85) {
       setTestRank('A');
-    } else if (score >= 66 && score <= 80) {
+    } else if (score >= 71 && score <= 80) {
       setTestRank('B');
-    } else if (score >= 51 && score <= 65) {
+    } else if (score >= 51 && score <= 70) {
       setTestRank('C');
     } else if (score >= 40 && score <= 50) {
       setTestRank('D');
