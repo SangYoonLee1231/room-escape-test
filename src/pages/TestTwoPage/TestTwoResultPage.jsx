@@ -173,19 +173,20 @@ const TestTwoResultPage = () => {
       </Instruction>
       <Instruction height="1000px" fontColor="black">
         <InstructionList>
-          현재 '고수 테스트'의 해설지는 준비 중에 있습니다.
+          '고수 테스트'의 해설은 따로 제공하지 않습니다.
         </InstructionList>
+        <InstructionList>그럼에도 해설이 정말 궁금하신 분들은</InstructionList>
         <InstructionList>
-          해설이 궁금하신 분들은 오픈채팅방으로 문의해주시기 바랍니다.
+          일대일 오픈채팅방의 문을 두드려주세요.
         </InstructionList>
-        <ExplanationBtn
-        // onClick={() => {
-        //   window.open('');
-        // }}
-        // target="_blank"
+        {/* <ExplanationBtn
+          onClick={() => {
+            window.open('');
+          }}
+          target="_blank"
         >
           해설 보러 가기 (준비중)
-        </ExplanationBtn>
+        </ExplanationBtn> */}
         <InstructionList />
         <InstructionList />
         <hr width="400px" />
@@ -195,7 +196,7 @@ const TestTwoResultPage = () => {
           또한, 그 밖에도 제작자에게 문의드리고 싶은 것이 있으시다면
         </InstructionList>
         <InstructionList>
-          언제든 일대일 오픈채팅방의 문을 두드려주시기 바랍니다.
+          언제든 일대일 오픈채팅방을 이용해주시기 바랍니다.
         </InstructionList>
         <ExplanationBtn
           onClick={() => {
