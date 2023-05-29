@@ -80,20 +80,20 @@ const TestTwoResultPage = () => {
 
     if (score === 100) {
       setTestRank('S');
-    } else if (score >= 90 && score <= 99) {
+    } else if (score >= 95 && score <= 99) {
       setTestRank('A+');
-    } else if (score >= 80 && score <= 89) {
+    } else if (score >= 90 && score <= 94) {
       setTestRank('A');
-    } else if (score >= 70 && score <= 79) {
-      setTestRank('B+');
-    } else if (score >= 55 && score <= 69) {
+    } else if (score >= 70 && score <= 89) {
       setTestRank('B');
-    } else if (score >= 40 && score <= 54) {
-      setTestRank('C+');
-    } else if (score >= 30 && score <= 39) {
+    } else if (score >= 55 && score <= 69) {
       setTestRank('C');
-    } else if (score >= 20 && score <= 29) {
+    } else if (score >= 40 && score <= 54) {
       setTestRank('D');
+      // } else if (score >= 30 && score <= 39) {
+      //   setTestRank('C');
+      // } else if (score >= 20 && score <= 29) {
+      //   setTestRank('D');
     } else {
       setTestRank('F');
     }
