@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img src="public/images/etc/logo.png" width="700">
+<img src="public/images/etc/logo.png" width="600">
 
 <a href="">🎮 플레이 하러 가기 (배포 준비 중..)</a>
 
@@ -16,7 +16,7 @@
 
 ## 프로젝트 소개
 
-- 초보부터 고수까지. 방탈출을 좋아하는 모든 사람들을 위한 방탈출 능력 미니 테스트입니다.
+- 초보부터 고수까지, 방탈출 혹은 미궁게임을 좋아하는 모든 사람들을 위한 방탈출 능력 미니 테스트 앱입니다.
 
 - 방탈출 문제 및 미궁 게임 제작자 SYL의 공식 7번째 작품입니다.
 
@@ -25,6 +25,16 @@
 - SWYG에서 진행한 스터디인 SWYDY(스위디)에서 진행했던 개인 프로젝트입니다.
 
 - 개발 기간 : 2023.05.15 ~ 2023.05.30
+
+<br/>
+
+<div align="center">
+
+<img src="public/images/etc/play-screenshot.png" height="300">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="public/images/etc/play-screenshot2.png" height="300">
+
+</div>
 
 <br/><br/>
 
