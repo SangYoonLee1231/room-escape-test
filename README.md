@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img src="public/images/etc/logo.png" width="600">
+<img src="public/images/etc/logo.png" width="500">
 
 <a href="">🎮 플레이 하러 가기 (배포 준비 중..)</a>
 
@@ -30,9 +30,9 @@
 
 <div align="center">
 
-<img src="public/images/etc/play-screenshot.png" height="300">
+<img src="public/images/etc/play-screenshot.png" height="330">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<img src="public/images/etc/play-screenshot2.png" height="300">
+<img src="public/images/etc/play-screenshot2.png" height="330">
 
 </div>
 
