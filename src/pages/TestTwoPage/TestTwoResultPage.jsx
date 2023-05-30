@@ -39,7 +39,7 @@ const TestTwoResultPage = () => {
     'GROVE',
     '5984',
     '3554',
-    'radar',
+    'ADOPT',
     'LOCK',
     'NOWHERE',
     'Sound',
@@ -113,7 +113,7 @@ const TestTwoResultPage = () => {
           <InstructionList />
           <InstructionList fontSize="18px">수고하셨습니다.</InstructionList>
           <InstructionList fontSize="18px">
-            {nickname}님의 '기초 역량 테스트' 점수는 {testScore}
+            {nickname}님의 '고수 테스트' 점수는 {testScore}
             점입니다.
           </InstructionList>
           <InstructionList fontSize="18px">
@@ -173,9 +173,9 @@ const TestTwoResultPage = () => {
       </Instruction>
       <Instruction height="1000px" fontColor="black">
         <InstructionList>
-          '고수 테스트'의 해설은 따로 제공하지 않습니다.
+          '고수 테스트'의 해설은 현재 준비중에 있습니다.
         </InstructionList>
-        <InstructionList>그럼에도 해설이 정말 궁금하신 분들은</InstructionList>
+        <InstructionList>그 전까지 해설이 궁금하신 분들은</InstructionList>
         <InstructionList>
           일대일 오픈채팅방의 문을 두드려주세요.
         </InstructionList>
