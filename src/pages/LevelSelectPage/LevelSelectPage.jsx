@@ -28,7 +28,7 @@ const LevelSelctPage = () => {
           {/* <Text fontSize="12px">
             ▸ 추천 대상 : 모든 인원 (초보자에게 특히 추천)
           </Text> */}
-          <Text fontSize="12px">▸ 문제 수 : 20문제 / 제한시간: 30분</Text>
+          <Text fontSize="12px">▸ 문제 수: 20문제 / 제한시간: 30분</Text>
         </TestInfo>
       </TestButton>
       <TestButton onClick={moveToTestTwo}>
@@ -37,15 +37,17 @@ const LevelSelctPage = () => {
           📌 고수 테스트
         </Text>
         <TestInfo>
-          <Text fontSize="13px">
-            다양한 방탈출 문제를 풀어본 경험이 요구되는, 숙련자를 위한 시험
+          <Text fontSize="14px">
+            다양한 방탈출 문제를 접한 경험이 요구되는, 숙련자를 위한 시험
           </Text>
-          <Text fontSize="14px">(최소한의 가이드만 제공)</Text>
+          <Text fontSize="13px">
+            (최소한의 가이드만으로 빠르고 정확한 문제 해결이 관건)
+          </Text>
           <Text fontSize="3px" />
           {/* <Text fontSize="12px">
             ▸ 추천 대상 : 방탈출 혹은 미궁 게임 클리어 유경험자
           </Text> */}
-          <Text fontSize="12px">▸ 문제 수 : 20문제 / 제한시간: 40분</Text>
+          <Text fontSize="12px">▸ 문제 수: 20문제 / 제한시간: 30분</Text>
         </TestInfo>
       </TestButton>
     </MainBody>
