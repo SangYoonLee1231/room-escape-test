@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img src="public/images/etc/logo.png" width="1000">
+<img src="public/images/etc/logo.png" width="700">
 
 <a href="">🎮 플레이 하러 가기 (배포 준비 중..)</a>
 
@@ -96,3 +96,5 @@
 ## 라이센스
 
 MIT © SangYoonLee
+
+<br/>
