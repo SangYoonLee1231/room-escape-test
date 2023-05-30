@@ -78,6 +78,7 @@ const SubTitle = styled.div`
 
 const Text = styled.span`
   font-size: ${props => props.fontSize || 200};
+  font-weight: 600;
   margin: 7px;
 `;
 
