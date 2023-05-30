@@ -34,6 +34,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <img src="public/images/etc/play-screenshot2.png" height="330">
 
+<br/>
+
 ⭐️ **재밌게 플레이해주세요!** ⭐️
 
 </div>
