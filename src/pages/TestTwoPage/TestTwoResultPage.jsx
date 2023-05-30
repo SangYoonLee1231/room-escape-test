@@ -226,7 +226,7 @@ const TestTwoResultPage = () => {
           }}
           target="_blank"
         >
-          제작자의 다른 작품 보러 가기
+          제작자의 다른 작품 보러가기
         </ExplanationBtn>
         <ExplanationBtn
           onClick={() => {
