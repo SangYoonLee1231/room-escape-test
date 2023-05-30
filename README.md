@@ -40,16 +40,13 @@
 
 ## 🛠️ 기술 스택
 
-#### Environment
-
 <div align="center">
 
-<img src="https://img.shields.
-io/badge/Visual Studio Code-007ACC?style=for-the-badge&logo=Visual Studio Code&logoColor=white">
+#### Environment
+
+<img src="https://img.shields.io/badge/Visual Studio Code-007ACC?style=for-the-badge&logo=Visual Studio Code&logoColor=white">
 <img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white">
 <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
-
-</div>
 
 #### Config
 
@@ -65,6 +62,8 @@ io/badge/Visual Studio Code-007ACC?style=for-the-badge&logo=Visual Studio Code&l
 
 <img src="https://img.shields.io/badge/Microsoft PowerPoint-B7472A?style=for-the-badge&logo=Microsoft PowerPoint&logoColor=white">
 <img src="https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=Notion&logoColor=white">
+
+</div>
 
 <br/><br/>
 
