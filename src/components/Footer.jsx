@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <FooterDiv>
       <InquiryMessage>
-        <Message>기획/디자인/개발: 이상윤(SYL)</Message>
+        <Message>기획/디자인/개발: SYL</Message>
         <Message>sylagape1231@gmail.com</Message>
         <Message>© 2023. Room Escape Test All Right Reserved.</Message>
         <Message>
