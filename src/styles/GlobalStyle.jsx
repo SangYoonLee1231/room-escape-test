@@ -47,7 +47,7 @@ const GlobalStyle = createGlobalStyle`
     background-size: cover;
     background-repeat: repeat;
     height: 100%;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     animation: moveBackground 36.5s linear infinite;
   }
 
