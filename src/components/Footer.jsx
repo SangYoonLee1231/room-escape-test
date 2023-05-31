@@ -37,6 +37,7 @@ const InquiryMessage = styled.div`
 const Message = styled.div`
   margin: 5px;
   color: white;
+  font-size: small;
 `;
 
 export default Footer;
