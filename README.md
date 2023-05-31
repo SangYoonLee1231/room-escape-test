@@ -22,7 +22,7 @@
 
   <a href="https://superb-ranunculus-46a.notion.site/cb0658883e874aa6b9414d8da7c8aefa">👉 제작자의 다른 작품 보러가기</a>
 
-- SWYG에서 진행한 스터디인 SWYDY(스위디)에서 진행했던 개인 프로젝트입니다.
+- SWYG에서 주최한 스터디 'SWYDY(스위디)'에서 진행했던 개인 프로젝트입니다.
 
 - 개발 기간 : 2023.05.15 ~ 2023.05.30
 
