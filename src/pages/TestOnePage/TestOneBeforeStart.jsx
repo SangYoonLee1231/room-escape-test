@@ -130,7 +130,7 @@ const Timer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 400px;
+  width: 380px;
   height: 50px;
   border-radius: 5px;
   background-color: black;
@@ -144,10 +144,10 @@ const Instruction = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 400px;
+  width: 370px;
   height: 650px;
   margin: 10px 0px;
-  padding: 50px;
+  padding: 40px;
   border-radius: 5px;
   background-color: white;
   font-family: 'paybooc';

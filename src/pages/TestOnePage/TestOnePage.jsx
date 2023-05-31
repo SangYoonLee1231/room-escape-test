@@ -141,7 +141,7 @@ const TestOnePage = () => {
       ) : (
         <Question src={`./images/questions/q${quizNum}.png`} />
       )} */}
-      <Question src={`./images/questions/q${quizNum}.png`} width="500px" />
+      <Question src={`./images/questions/q${quizNum}.png`} width="350px" />
       <FooterArea>
         <QuestionBar>
           <MoveBtn onClick={moveToPrev}>◀︎</MoveBtn>
@@ -233,7 +233,7 @@ const Timer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 400px;
+  width: 380px;
   height: 50px;
   border-radius: 5px;
   background-color: black;
@@ -246,7 +246,7 @@ const QuestionNum = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 400px;
+  width: 250px;
   height: 50px;
   border-radius: 5px;
   background-color: black;
@@ -260,12 +260,14 @@ const Question = styled.img``;
 const FooterArea = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: space-between;
   margin: 15px 0px;
 `;
 
 const QuestionBar = styled.div`
   display: flex;
+  justify-content: center;
   align-items: space-between;
   margin: 10px 0px;
 `;
@@ -292,9 +294,9 @@ const BtnArea = styled.div`
 `;
 
 const EndBtn = styled.button`
-  width: 230px;
-  height: 30px;
-  margin: 0px 10px;
+  width: 180px;
+  height: 35px;
+  margin: 10px 10px;
   font-size: medium;
   transition: transform 0.1s ease-in-out;
   &:hover {
@@ -303,9 +305,9 @@ const EndBtn = styled.button`
 `;
 
 const AnswerSheetBtn = styled.button`
-  width: 230px;
-  height: 30px;
-  margin: 0px 10px;
+  width: 180px;
+  height: 35px;
+  margin: 10px 10px;
   font-size: medium;
   transition: transform 0.1s ease-in-out;
   &:hover {

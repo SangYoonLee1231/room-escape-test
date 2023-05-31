@@ -111,12 +111,12 @@ const TestOneResultPage = () => {
         <ul>
           <InstructionList fontSize="50px">👏🏻</InstructionList>
           <InstructionList />
-          <InstructionList fontSize="18px">수고하셨습니다.</InstructionList>
-          <InstructionList fontSize="18px">
+          <InstructionList fontSize="17px">수고하셨습니다.</InstructionList>
+          <InstructionList fontSize="17px">
             {nickname}님의 '기초 역량 테스트' 점수는 {testScore}
             점입니다.
           </InstructionList>
-          <InstructionList fontSize="18px">
+          <InstructionList fontSize="17px">
             등급은 {testRank}입니다.
           </InstructionList>
           <InstructionList>
@@ -309,7 +309,7 @@ const Instruction = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 500px;
+  width: 400px;
   height: ${props => props.height || '1100px'};
   margin: 10px 0px 100px 0px;
   border-radius: 5px;
@@ -333,7 +333,7 @@ const InstructionList = styled.li`
   align-items: center;
   padding: 10px 0px;
   line-height: 25px;
-  font-size: ${props => props.fontSize || '16px'};
+  font-size: ${props => props.fontSize || '14px'};
 `;
 
 const ResultTable = styled.table`
@@ -343,10 +343,10 @@ const ResultTable = styled.table`
     border: 1px solid black;
   }
   .short {
-    width: 70px;
+    width: 50px;
   }
   .long {
-    width: 120px;
+    width: 100px;
   }
 `;
 
