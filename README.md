@@ -4,7 +4,7 @@
 
 <img src="public/images/etc/logo.png" width="500">
 
-<a href="https://roomescapetest.swygbro.com/">🎮 플레이 하러 가기</a>
+<a href="https://roomescapetest.swygbro.com/" target="_blank">🎮 플레이 하러 가기</a>
 
 <br/>
 
