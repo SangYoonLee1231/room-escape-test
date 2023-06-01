@@ -36,7 +36,7 @@ const TestTwoResultPage = () => {
     'WHALE',
     'PEN',
     '뇌',
-    'GROVE',
+    '1225',
     '5984',
     '3554',
     'ADOPT',
@@ -46,7 +46,7 @@ const TestTwoResultPage = () => {
     'TON',
     'BOXER',
     '1010',
-    'SNAP',
+    'GROVE,SNAP',
     '신발',
     '1050',
     'NET',
@@ -72,7 +72,10 @@ const TestTwoResultPage = () => {
   const calcScore = () => {
     let score = 0;
     for (let i = 0; i < 20; i++) {
-      if (answersheet[i].toUpperCase() === answer[i].toUpperCase()) {
+      if (
+        answersheet[i].split(' ').join('').toUpperCase() ===
+        answer[i].toUpperCase()
+      ) {
         score += 5;
       }
     }
@@ -133,7 +136,8 @@ const TestTwoResultPage = () => {
                   <td>{value}</td>
                   <td>{answer[index]}</td>
                   <td>
-                    {value.toUpperCase() === answer[index].toUpperCase()
+                    {value.split(' ').join('').toUpperCase() ===
+                    answer[index].toUpperCase()
                       ? 'O'
                       : 'X'}
                   </td>

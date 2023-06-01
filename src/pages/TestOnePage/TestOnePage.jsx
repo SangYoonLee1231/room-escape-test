@@ -141,7 +141,11 @@ const TestOnePage = () => {
       ) : (
         <Question src={`./images/questions/q${quizNum}.png`} />
       )} */}
-      <Question src={`./images/questions/q${quizNum}.png`} width="350px" />
+      <Question
+        src={`./images/questions/q${quizNum}.png`}
+        width="350px"
+        height="350px"
+      />
       <FooterArea>
         <QuestionBar>
           <MoveBtn onClick={moveToPrev}>◀︎</MoveBtn>

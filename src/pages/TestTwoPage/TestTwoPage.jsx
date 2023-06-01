@@ -144,6 +144,7 @@ const TestTwoPage = () => {
       <Question
         src={`./images/expert_questions/expert_q${quizNum}.png`}
         width="350px"
+        height="350px"
       />
       <FooterArea>
         <QuestionBar>
