@@ -177,20 +177,21 @@ const TestTwoResultPage = () => {
       </Instruction>
       <Instruction height="1000px" fontColor="black">
         <InstructionList>
-          '고수 테스트'의 해설은 현재 준비중에 있습니다.
+          문제의 풀이가 궁금하신 분들을 위해 해설 답안을 제공합니다.
         </InstructionList>
-        <InstructionList>그 전까지 해설이 궁금하신 분들은</InstructionList>
         <InstructionList>
-          일대일 오픈채팅방의 문을 두드려주세요.
+          (해설 사이트 접속까지 시간이 꽤 소요될 수 있습니다.)
         </InstructionList>
-        {/* <ExplanationBtn
+        <ExplanationBtn
           onClick={() => {
-            window.open('');
+            window.open(
+              'https://superb-ranunculus-46a.notion.site/38a27b0ee9104ad99fd01ac1f5c341a5?pvs=4'
+            );
           }}
           target="_blank"
         >
-          해설 보러 가기 (준비중)
-        </ExplanationBtn> */}
+          해설 보러 가기
+        </ExplanationBtn>
         <InstructionList />
         <InstructionList />
         <hr width="400px" />
