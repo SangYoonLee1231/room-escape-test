@@ -14,7 +14,7 @@ const StartPage = () => {
       <SubTitle>
         <Text>방탈출 초보부터 고수까지</Text>
         <Text>모두를 위한 방탈출 능력 미니 테스트</Text>
-        <Text>▶︎ 응시자 수 : 약 2830명 ◀︎</Text>
+        <Text fontSize="small">▶︎ 응시자 수 : 2826명 (6/14 기준) ◀︎</Text>
         {/* <Text>Made by SYL</Text> */}
       </SubTitle>
       <StartButton onClick={onAboutClick}>START</StartButton>
@@ -79,7 +79,7 @@ const SubTitle = styled.div`
 `;
 
 const Text = styled.span`
-  font-size: 200;
+  font-size: ${props => props.fontSize || 'medium'};
   font-weight: 600;
   margin: 7px;
 `;
