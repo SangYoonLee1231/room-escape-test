@@ -14,7 +14,7 @@ const StartPage = () => {
       <SubTitle>
         <Text>방탈출 초보부터 고수까지</Text>
         <Text>모두를 위한 방탈출 능력 미니 테스트</Text>
-        <Text fontSize="small">▶︎ 응시자 수 : 3571명 (6/30 기준) ◀︎</Text>
+        <Text fontSize="small">▶︎ 응시자 수 : 3585명 (7/1 기준) ◀︎</Text>
         {/* <Text>Made by SYL</Text> */}
       </SubTitle>
       <StartButton onClick={onAboutClick}>START</StartButton>
