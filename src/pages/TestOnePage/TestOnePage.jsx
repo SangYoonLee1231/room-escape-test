@@ -23,8 +23,10 @@ const TestOnePage = () => {
     });
   };
 
-  // 타이머 설정 코드 - useState Hook
+  // 현재 문제 번호 저장하는 useState Hook
   const [quizNum, setQuizNum] = useState(1);
+
+  // 타이머 설정 코드 - useState Hook
   const [timeRemain, setTimeRemain] = useState(1800);
 
   // 모달 창 Hook
@@ -105,7 +107,7 @@ const TestOnePage = () => {
   };
 
   const handleConfirm = () => {
-    // 확인 버튼을 눌렀을 때 수행할 작업
+    // 답안지 제출 확인 버튼을 눌렀을 때 수행할 작업
     moveToResultPage();
     closeModal();
   };
@@ -124,8 +126,6 @@ const TestOnePage = () => {
     const newInputValues = [...inputValues];
     newInputValues[index] = event.target.value;
     setInputValues(newInputValues);
-
-    // console.log(inputValues);
   };
 
   return (

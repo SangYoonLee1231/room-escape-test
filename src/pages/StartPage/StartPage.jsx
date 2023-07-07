@@ -14,7 +14,11 @@ const StartPage = () => {
       <SubTitle>
         <Text>방탈출 초보부터 고수까지</Text>
         <Text>모두를 위한 방탈출 능력 미니 테스트</Text>
-        <Text fontSize="small">▶︎ 응시자 수 : 3585명 (7/1 기준) ◀︎</Text>
+        <Text>-----------------------------</Text>
+        <Text fontSize="small">▶︎ 응시자 수 : 3585명 ◀︎</Text>
+        <Text fontSize="x-small">
+          (응시자 수는 매주 월요일에 업데이트 됩니다)
+        </Text>
         {/* <Text>Made by SYL</Text> */}
       </SubTitle>
       <StartButton onClick={onAboutClick}>START</StartButton>
@@ -67,9 +71,9 @@ const SubTitle = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 280px;
-  height: 128px;
-  margin: 4vh 0vh;
+  width: 290px;
+  height: 178px;
+  margin: 7vh 0vh 4vh 0vh;
   border: 3px solid white;
   border-radius: 20px;
   background-color: black;
