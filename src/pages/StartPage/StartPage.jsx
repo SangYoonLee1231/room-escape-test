@@ -15,7 +15,7 @@ const StartPage = () => {
         <Text>방탈출 초보부터 고수까지</Text>
         <Text>모두를 위한 방탈출 능력 미니 테스트</Text>
         <Text>-----------------------------</Text>
-        <Text fontSize="small">▶︎ 응시자 수 : 3585명 ◀︎</Text>
+        <Text fontSize="small">▶︎ 응시자 수 : 3812명 ◀︎</Text>
         <Text fontSize="x-small">
           (응시자 수는 매주 월요일에 업데이트 됩니다)
         </Text>
