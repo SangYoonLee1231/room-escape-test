@@ -14,13 +14,14 @@ const StartPage = () => {
       <SubTitle>
         <Text>방탈출 초보부터 고수까지</Text>
         <Text>모두를 위한 방탈출 능력 미니 테스트</Text>
-        <Text>-----------------------------</Text>
+        {/* <Text>Made by SYL</Text> */}
+      </SubTitle>
+      <SubTitleTwo>
         <Text fontSize="small">▶︎ 응시자 수 : 3812명 ◀︎</Text>
         <Text fontSize="x-small">
           (응시자 수는 매주 월요일에 업데이트 됩니다)
         </Text>
-        {/* <Text>Made by SYL</Text> */}
-      </SubTitle>
+      </SubTitleTwo>
       <StartButton onClick={onAboutClick}>START</StartButton>
     </MainBody>
   );
@@ -72,12 +73,28 @@ const SubTitle = styled.div`
   justify-content: center;
   align-items: center;
   width: 290px;
-  height: 178px;
-  margin: 7vh 0vh 4vh 0vh;
+  height: 95px;
+  margin: 9vh 0vh 1vh 0vh;
   border: 3px solid white;
   border-radius: 20px;
   background-color: black;
   color: white;
+  font-family: 'SEBANG_Gothic';
+  font-size: 16px;
+`;
+
+const SubTitleTwo = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  height: 62px;
+  margin: 1vh 0vh 3vh 0vh;
+  border: 3px solid white;
+  border-radius: 30px;
+  background-color: white;
+  color: black;
   font-family: 'SEBANG_Gothic';
   font-size: 16px;
 `;
