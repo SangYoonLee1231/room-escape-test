@@ -17,7 +17,7 @@ const StartPage = () => {
         {/* <Text>Made by SYL</Text> */}
       </SubTitle>
       <SubTitleTwo>
-        <Text fontSize="small">▶︎ 응시자 수 : 3812명 ◀︎</Text>
+        <Text fontSize="small">▶︎ 응시자 수 : 4016명 ◀︎</Text>
         <Text fontSize="x-small">
           (응시자 수는 매주 월요일에 업데이트 됩니다)
         </Text>
