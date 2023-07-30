@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
+import GoogleAd, { infeedProps } from '../../components/GoogleAd';
 
 const TestOneResultPage = () => {
   const location = useLocation();
@@ -152,6 +153,7 @@ const TestOneResultPage = () => {
         <InstructionList />
         <InstructionList />
       </Instruction>
+      <GoogleAd {...infeedProps} />
       <Instruction height="1000px" fontColor="black">
         <InstructionList>
           문제의 풀이가 궁금하신 분들을 위해 해설 답안을 제공합니다.
@@ -230,6 +232,7 @@ const TestOneResultPage = () => {
         <InstructionList>◆ 플레이 해주셔서 감사드립니다. ◆</InstructionList>
         <InstructionList />
       </Instruction>
+      <GoogleAd {...infeedProps} />
       <FooterArea>
         {/* <NicknameBar>
           <NicknameSpan>테스트에 응해주셔서 감사드립니다</NicknameSpan>

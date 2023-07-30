@@ -1,21 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
+import GoogleAd, { infeedProps } from './GoogleAd';
 // import styled from 'styled-components';
 
 const Footer = () => {
   return (
-    <FooterDiv>
-      <InquiryMessage>
-        <Message>기획/디자인/개발: SYL</Message>
-        <Message>sylagape1231@gmail.com</Message>
-        <Message>© 2023. Room Escape Test All Right Reserved.</Message>
-        <Message>
-          <a href="https://github.com/SangYoonLee1231/escape-99-app">
-            SYL's Github
-          </a>
-        </Message>
-      </InquiryMessage>
-    </FooterDiv>
+    <>
+      <GoogleAd {...infeedProps} />
+      <FooterDiv>
+        <InquiryMessage>
+          <Message>기획/디자인/개발: SYL</Message>
+          <Message>sylagape1231@gmail.com</Message>
+          <Message>© 2023. Room Escape Test All Right Reserved.</Message>
+          <Message>
+            <a href="https://github.com/SangYoonLee1231/escape-99-app">
+              SYL's Github
+            </a>
+          </Message>
+        </InquiryMessage>
+      </FooterDiv>
+    </>
   );
 };
 
