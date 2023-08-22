@@ -35,7 +35,8 @@ const LevelSelctPage = () => {
           <Text fontSize="12px">▶︎ 문제 수: 20문제 | 제한시간: 30분 ◀︎</Text>
         </TestInfo>
       </TestButton>
-      <TestButton onClick={moveToTestTwo}>
+      {/* <TestButton onClick={moveToTestTwo}> */}
+      <TestButton>
         {/* <Text fontSize="x-large" fontStyle="SEBANG_Gothic" marginBottom="20px">
           📌 기초 역량 테스트 2
         </Text> */}
