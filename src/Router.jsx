@@ -4,9 +4,15 @@ import LevelSelectPage from './pages/LevelSelectPage/LevelSelectPage';
 import TestOnePage from './pages/TestOnePage/TestOnePage';
 import TestOneResultPage from './pages/TestOnePage/TestOneResultPage';
 import TestOneBeforeStart from './pages/TestOnePage/TestOneBeforeStart';
-import TestTwoPage from './pages/TestTwoPage/TestTwoPage';
-import TestTwoResultPage from './pages/TestTwoPage/TestTwoResultPage';
-import TestTwoBeforeStart from './pages/TestTwoPage/TestTwoBeforeStart';
+import TestTwoPage from './pages/TestThreePage/TestThreePage';
+import TestTwoResultPage from './pages/TestThreePage/TestThreeResultPage';
+import TestTwoBeforeStart from './pages/TestThreePage/TestThreeBeforeStart';
+import TestThreePage from './pages/TestThreePage/TestThreePage';
+import TestThreeResultPage from './pages/TestThreePage/TestThreeResultPage';
+import TestThreeBeforeStart from './pages/TestThreePage/TestThreeBeforeStart';
+// import TestPage from './pages/TestPage/TestPage';
+// import TestResultPage from './pages/TestPage/TestResultPage';
+// import TestBeforeStart from './pages/TestPage/TestBeforeStart';
 import Root from './Root';
 
 const router = createBrowserRouter([
@@ -35,40 +41,71 @@ const router = createBrowserRouter([
       },
       {
         path: 'test-one-before-start',
-        element: (
-          <TestOneBeforeStart />
-        ) /* Root의 Outlet이 LevelSelectPage 컴포넌트로 대체 */,
+        element: <TestOneBeforeStart />,
       },
       {
         path: 'test-one',
-        element: (
-          <TestOnePage />
-        ) /* Root의 Outlet이 LevelSelectPage 컴포넌트로 대체 */,
+        element: <TestOnePage />,
       },
       {
         path: 'test-one-result',
-        element: (
-          <TestOneResultPage />
-        ) /* Root의 Outlet이 LevelSelectPage 컴포넌트로 대체 */,
+        element: <TestOneResultPage />,
       },
       {
         path: 'test-two-before-start',
-        element: (
-          <TestTwoBeforeStart />
-        ) /* Root의 Outlet이 LevelSelectPage 컴포넌트로 대체 */,
+        element: <TestTwoBeforeStart />,
       },
       {
         path: 'test-two',
-        element: (
-          <TestTwoPage />
-        ) /* Root의 Outlet이 LevelSelectPage 컴포넌트로 대체 */,
+        element: <TestTwoPage />,
       },
       {
         path: 'test-two-result',
-        element: (
-          <TestTwoResultPage />
-        ) /* Root의 Outlet이 LevelSelectPage 컴포넌트로 대체 */,
+        element: <TestTwoResultPage />,
       },
+      {
+        path: 'test-three-before-start',
+        element: <TestThreeBeforeStart />,
+      },
+      {
+        path: 'test-three',
+        element: <TestThreePage />,
+      },
+      {
+        path: 'test-three-result',
+        element: <TestThreeResultPage />,
+      },
+      // 테스트 페이지 통합 작업
+      // {
+      //   path: 'test-before-start',
+      //   element: <TestBeforeStart />,
+      //   children: [
+      //     {
+      //       path: ':type',
+      //       element: <TestBeforeStart />,
+      //     },
+      //   ],
+      // },
+      // {
+      //   path: 'test',
+      //   element: <TestPage />,
+      //   children: [
+      //     {
+      //       path: ':type',
+      //       element: <TestPage />,
+      //     },
+      //   ],
+      // },
+      // {
+      //   path: 'test-result',
+      //   element: <TestResultPage />,
+      //   children: [
+      //     {
+      //       path: ':type',
+      //       element: <TestResultPage />,
+      //     },
+      //   ],
+      // },
     ],
     // errorElement: (
     //   <NotFound />

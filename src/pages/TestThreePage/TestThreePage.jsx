@@ -5,7 +5,7 @@ import Modal from 'react-modal';
 
 Modal.setAppElement('#root');
 
-const TestOnePage = () => {
+const TestThreePage = () => {
   // 닉네임 정보 받아오기
   const location = useLocation();
 
@@ -15,7 +15,7 @@ const TestOnePage = () => {
   const navigate = useNavigate();
   const moveToResultPage = () => {
     const data = JSON.stringify(inputValues);
-    navigate(`/test-one-result`, {
+    navigate(`/test-three-result`, {
       state: {
         answersheet: data || '',
         nickname: nickname || '학생',
@@ -23,10 +23,8 @@ const TestOnePage = () => {
     });
   };
 
-  // 현재 문제 번호 저장하는 useState Hook
-  const [quizNum, setQuizNum] = useState(1);
-
   // 타이머 설정 코드 - useState Hook
+  const [quizNum, setQuizNum] = useState(1);
   const [timeRemain, setTimeRemain] = useState(1800);
 
   // 모달 창 Hook
@@ -107,7 +105,7 @@ const TestOnePage = () => {
   };
 
   const handleConfirm = () => {
-    // 답안지 제출 확인 버튼을 눌렀을 때 수행할 작업
+    // 확인 버튼을 눌렀을 때 수행할 작업
     moveToResultPage();
     closeModal();
   };
@@ -126,6 +124,8 @@ const TestOnePage = () => {
     const newInputValues = [...inputValues];
     newInputValues[index] = event.target.value;
     setInputValues(newInputValues);
+
+    // console.log(inputValues);
   };
 
   return (
@@ -142,7 +142,7 @@ const TestOnePage = () => {
         <Question src={`./images/questions/q${quizNum}.png`} />
       )} */}
       <Question
-        src={`./images/type1/q${quizNum}.png`}
+        src={`./images/type3/q${quizNum}.png`}
         width="350px"
         height="350px"
       />
@@ -264,15 +264,14 @@ const Question = styled.img``;
 const FooterArea = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: space-between;
   margin: 15px 0px;
 `;
 
 const QuestionBar = styled.div`
   display: flex;
-  justify-content: center;
   align-items: space-between;
+  justify-content: center;
   margin: 10px 0px;
 `;
 
@@ -384,4 +383,4 @@ const AnswerSheetCloseBtn = styled.button`
   }
 `;
 
-export default TestOnePage;
+export default TestThreePage;

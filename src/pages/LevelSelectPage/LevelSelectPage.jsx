@@ -4,11 +4,18 @@ import styled from 'styled-components';
 
 const LevelSelctPage = () => {
   const navigate = useNavigate();
+
+  // '기초 역량 테스트'로 이동
   const moveToTestOne = () => {
     navigate('/test-one-before-start');
   };
+  // '기초 역량 테스트2'로 이동
   const moveToTestTwo = () => {
     navigate('/test-two-before-start');
+  };
+  // '기초 역량 테스트2'로 이동
+  const moveToTestThree = () => {
+    navigate('/test-three-before-start');
   };
 
   return (
@@ -28,11 +35,28 @@ const LevelSelctPage = () => {
           {/* <Text fontSize="12px">
             ▸ 추천 대상 : 모든 인원 (초보자에게 특히 추천)
           </Text> */}
-          <Text fontSize="12px">▸ 문제 수: 20문제</Text>
-          <Text fontSize="12px">▸ 제한시간: 30분</Text>
+          <Text fontSize="12px">▶︎ 문제 수: 20문제 | 제한시간: 30분 ◀︎</Text>
         </TestInfo>
       </TestButton>
       <TestButton onClick={moveToTestTwo}>
+        {/* ＜＜ ＞＞ */}
+        <Text fontSize="x-large" fontStyle="SEBANG_Gothic" marginBottom="20px">
+          📌 기초 역량 테스트 2
+        </Text>
+        <TestInfo>
+          <Text fontSize="13px">다른 버전의 방탈출 기본기 테스트</Text>
+          <Text fontSize="13px">(2023년 8월 28일 출시)</Text>
+          <Text fontSize="14px">첫 테스트보다 조금 더 어려움</Text>
+          {/* <Text fontSize="14px">기본기 테스트</Text> */}
+          <Text fontSize="5px" />
+          <Text fontSize="5px" />
+          {/* <Text fontSize="12px">
+            ▸ 추천 대상 : 모든 인원 (초보자에게 특히 추천)
+          </Text> */}
+          <Text fontSize="12px">▶︎ 문제 수: 20문제 | 제한시간: 40분 ◀︎</Text>
+        </TestInfo>
+      </TestButton>
+      <TestButton onClick={moveToTestThree}>
         {/* ＜＜ ＞＞ */}
         <Text fontSize="x-large" fontStyle="SEBANG_Gothic" marginBottom="20px">
           📌 고수 테스트
@@ -47,8 +71,7 @@ const LevelSelctPage = () => {
           {/* <Text fontSize="12px">
             ▸ 추천 대상 : 방탈출 혹은 미궁 게임 클리어 유경험자
           </Text> */}
-          <Text fontSize="12px">▸ 문제 수: 20문제</Text>
-          <Text fontSize="12px">▸ 제한시간: 30분</Text>
+          <Text fontSize="12px">▶︎ 문제 수: 20문제 | 제한시간: 30분 ◀︎</Text>
         </TestInfo>
       </TestButton>
     </MainBody>
@@ -61,7 +84,6 @@ const MainBody = styled.div`
   justify-content: start;
   align-items: center;
   width: 100vw;
-  height: 95vh;
   margin-top: 10vh;
 `;
 
@@ -83,8 +105,8 @@ const TestButton = styled.button`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 220px;
   /* border: 1px solid black; */
   margin: 20px 0px;
   border-radius: 5px;
@@ -105,8 +127,8 @@ const TestInfo = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 210px;
-  height: 150px;
+  width: 250px;
+  height: 120px;
   margin-top: 5px;
   /* border: 2.5px solid #50505e; */
   border-radius: 5px;
