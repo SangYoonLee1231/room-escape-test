@@ -32,32 +32,26 @@ const LevelSelctPage = () => {
           <Text fontSize="14px">기본기 테스트</Text>
           <Text fontSize="5px" />
           <Text fontSize="5px" />
-          {/* <Text fontSize="12px">
-            ▸ 추천 대상 : 모든 인원 (초보자에게 특히 추천)
-          </Text> */}
           <Text fontSize="12px">▶︎ 문제 수: 20문제 | 제한시간: 30분 ◀︎</Text>
         </TestInfo>
       </TestButton>
       <TestButton onClick={moveToTestTwo}>
-        {/* ＜＜ ＞＞ */}
-        <Text fontSize="x-large" fontStyle="SEBANG_Gothic" marginBottom="20px">
+        {/* <Text fontSize="x-large" fontStyle="SEBANG_Gothic" marginBottom="20px">
           📌 기초 역량 테스트 2
+        </Text> */}
+        <Text fontSize="large" fontStyle="SEBANG_Gothic" marginBottom="20px">
+          📌 기초 역량 테스트 2 (준비중)
         </Text>
         <TestInfo>
-          <Text fontSize="13px">다른 버전의 방탈출 기본기 테스트</Text>
-          <Text fontSize="13px">(2023년 8월 28일 출시)</Text>
-          <Text fontSize="14px">'기초 역량 테스트'보다 조금 더 어려움</Text>
-          {/* <Text fontSize="14px">기본기 테스트</Text> */}
+          <Text fontSize="13px">새 버전의 방탈출 기본기 테스트</Text>
           <Text fontSize="5px" />
-          <Text fontSize="5px" />
-          {/* <Text fontSize="12px">
-            ▸ 추천 대상 : 모든 인원 (초보자에게 특히 추천)
-          </Text> */}
-          <Text fontSize="12px">▶︎ 문제 수: 20문제 | 제한시간: 40분 ◀︎</Text>
+          <Text fontSize="13px">⦿ 2023년 8월 28일 출시 예정 ⦿</Text>
+          {/* <Text fontSize="14px">'기초 역량 테스트'보다 조금 더 어려움</Text> */}
+          {/* <Text fontSize="5px" /> */}
+          {/* <Text fontSize="12px">▶︎ 문제 수: 20문제 | 제한시간: 40분 ◀︎</Text> */}
         </TestInfo>
       </TestButton>
       <TestButton onClick={moveToTestThree}>
-        {/* ＜＜ ＞＞ */}
         <Text fontSize="x-large" fontStyle="SEBANG_Gothic" marginBottom="20px">
           📌 고수 테스트
         </Text>
@@ -65,12 +59,8 @@ const LevelSelctPage = () => {
           <Text fontSize="13px">다양한 방탈출 문제를 접해본</Text>
           <Text fontSize="13px">경험이 요구되는</Text>
           <Text fontSize="14px">숙련자를 위한 시험</Text>
-          {/* <Text fontSize="12px">(최소한의 가이드만 제공)</Text> */}
           <Text fontSize="3px" />
           <Text fontSize="3px" />
-          {/* <Text fontSize="12px">
-            ▸ 추천 대상 : 방탈출 혹은 미궁 게임 클리어 유경험자
-          </Text> */}
           <Text fontSize="12px">▶︎ 문제 수: 20문제 | 제한시간: 30분 ◀︎</Text>
         </TestInfo>
       </TestButton>
