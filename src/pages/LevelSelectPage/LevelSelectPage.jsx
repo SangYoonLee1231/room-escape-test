@@ -41,12 +41,13 @@ const LevelSelctPage = () => {
           📌 기초 역량 테스트 2
         </Text> */}
         <Text fontSize="large" fontStyle="SEBANG_Gothic" marginBottom="20px">
-          📌 기초 역량 테스트 2 (준비중)
+          📌 상급 역량 테스트 (준비중)
         </Text>
         <TestInfo>
-          <Text fontSize="13px">새 버전의 방탈출 기본기 테스트</Text>
+          <Text fontSize="13px">새 버전의 방탈출 테스트</Text>
           <Text fontSize="5px" />
           <Text fontSize="13px">⦿ 2023년 8월 28일 출시 예정 ⦿</Text>
+          {/* <Text fontSize="13px"></Text> */}
           {/* <Text fontSize="14px">'기초 역량 테스트'보다 조금 더 어려움</Text> */}
           {/* <Text fontSize="5px" /> */}
           {/* <Text fontSize="12px">▶︎ 문제 수: 20문제 | 제한시간: 40분 ◀︎</Text> */}
@@ -75,7 +76,7 @@ const MainBody = styled.div`
   justify-content: start;
   align-items: center;
   width: 100vw;
-  margin-top: 10vh;
+  margin: 10vh 0 10vh 0;
 `;
 
 const InstructionInfo = styled.div`
