@@ -1,15 +1,19 @@
 import { createBrowserRouter } from 'react-router-dom';
 import StartPage from './pages/StartPage/StartPage';
 import LevelSelectPage from './pages/LevelSelectPage/LevelSelectPage';
+//
 import TestOnePage from './pages/TestOnePage/TestOnePage';
 import TestOneResultPage from './pages/TestOnePage/TestOneResultPage';
 import TestOneBeforeStart from './pages/TestOnePage/TestOneBeforeStart';
-import TestTwoPage from './pages/TestThreePage/TestThreePage';
-import TestTwoResultPage from './pages/TestThreePage/TestThreeResultPage';
-import TestTwoBeforeStart from './pages/TestThreePage/TestThreeBeforeStart';
+//
+import TestTwoPage from './pages/TestTwoPage/TestTwoPage';
+import TestTwoResultPage from './pages/TestTwoPage/TestTwoResultPage';
+import TestTwoBeforeStart from './pages/TestTwoPage/TestTwoBeforeStart';
+//
 import TestThreePage from './pages/TestThreePage/TestThreePage';
 import TestThreeResultPage from './pages/TestThreePage/TestThreeResultPage';
 import TestThreeBeforeStart from './pages/TestThreePage/TestThreeBeforeStart';
+//
 // import TestPage from './pages/TestPage/TestPage';
 // import TestResultPage from './pages/TestPage/TestResultPage';
 // import TestBeforeStart from './pages/TestPage/TestBeforeStart';

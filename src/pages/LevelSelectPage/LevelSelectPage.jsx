@@ -46,7 +46,7 @@ const LevelSelctPage = () => {
         <TestInfo>
           <Text fontSize="13px">다른 버전의 방탈출 기본기 테스트</Text>
           <Text fontSize="13px">(2023년 8월 28일 출시)</Text>
-          <Text fontSize="14px">첫 테스트보다 조금 더 어려움</Text>
+          <Text fontSize="14px">'기초 역량 테스트'보다 조금 더 어려움</Text>
           {/* <Text fontSize="14px">기본기 테스트</Text> */}
           <Text fontSize="5px" />
           <Text fontSize="5px" />
@@ -105,7 +105,7 @@ const TestButton = styled.button`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 300px;
+  width: 290px;
   height: 220px;
   /* border: 1px solid black; */
   margin: 20px 0px;
