@@ -7,6 +7,8 @@ const TestTwoResultPage = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
+  console.log(location.state.answersheet);
+
   // 점수 Hook
   const [testScore, setTestScore] = useState(0);
   const [testRank, setTestRank] = useState('');
@@ -15,7 +17,7 @@ const TestTwoResultPage = () => {
     calcScore();
   }, [testScore]);
 
-  const tempArray = Array.from({ length: 20 }, () => '.');
+  const tempArray = Array.from({ length: 15 }, () => '.');
 
   const answersheet = JSON.parse(
     location.state
@@ -23,56 +25,49 @@ const TestTwoResultPage = () => {
       : JSON.stringify(tempArray)
   );
   const nickname = location.state ? location.state.nickname || '학생' : '학생';
-  // console.log(answersheet);
-  // console.log(nickname);
 
   const moveToStartPage = () => {
     navigate('/');
   };
 
   const answer = [
-    'RICE',
-    'LOGIN',
+    'LAW',
+    '상전벽해',
+    '20',
+    'FISH',
     '왕',
-    'WHALE',
-    'PEN',
-    '뇌',
-    '1225',
-    '5984',
-    '3554',
-    'ADOPT',
-    'LOCK',
-    'NOWHERE',
-    'Sound',
-    'TON',
-    'BOXER',
-    '1010',
-    'GROVE,SNAP',
-    '신발',
-    '1050',
-    'NET',
+    'NEST',
+    'SEAL',
+    'VIVA',
+    'Doctor',
+    '540',
+    'CARBON',
+    'DOOR',
+    'RAINBOW',
+    'OFFICE',
+    'FILE',
   ];
 
   const rank = [
-    ['S', '91~100점', '천상계'],
+    ['S', '100점', '고수 후보생'],
     '',
-    ['A+', '86~90점', '초초고수'],
-    ['A', '81~85점', '초고수'],
+    ['A+', '95~99점', '정말 잘하심'],
+    ['A', '85~94점', '잘하심'],
     '',
-    // ['B+', '70~79점', '중수'],
-    ['B', '71~80점', '고수'],
+    ['B+', '70~84점', '중수'],
+    ['B', '60~69점', '성장 중'],
     '',
-    // ['C+', '40~54점', '초보'],
-    ['C', '51~70점', '상급자'],
+    ['C+', '50~59점', '초보'],
+    ['C', '40~49점', '왕초보'],
     '',
-    ['D', '40~50점', '중수'],
+    ['D', '35~39점', '경험 더 필요'],
     '',
-    ['F', '0~39점', '낙제'],
+    ['F', '0~34점', '낙제'],
   ];
 
   const calcScore = () => {
-    let score = 0;
-    for (let i = 0; i < 20; i++) {
+    let score = 25;
+    for (let i = 0; i < 15; i++) {
       if (
         answersheet[i].split(' ').join('').toUpperCase() ===
         answer[i].toUpperCase()
@@ -82,22 +77,22 @@ const TestTwoResultPage = () => {
     }
     setTestScore(score);
 
-    if (score >= 91 && score <= 100) {
+    if (score === 100) {
       setTestRank('S');
-    } else if (score >= 86 && score <= 90) {
+    } else if (score >= 95 && score <= 99) {
       setTestRank('A+');
-    } else if (score >= 81 && score <= 85) {
+    } else if (score >= 85 && score <= 94) {
       setTestRank('A');
-    } else if (score >= 71 && score <= 80) {
+    } else if (score >= 70 && score <= 84) {
+      setTestRank('B+');
+    } else if (score >= 60 && score <= 69) {
       setTestRank('B');
-    } else if (score >= 51 && score <= 70) {
+    } else if (score >= 50 && score <= 59) {
+      setTestRank('C+');
+    } else if (score >= 40 && score <= 59) {
       setTestRank('C');
-    } else if (score >= 40 && score <= 50) {
+    } else if (score >= 35 && score <= 39) {
       setTestRank('D');
-      // } else if (score >= 30 && score <= 39) {
-      //   setTestRank('C');
-      // } else if (score >= 20 && score <= 29) {
-      //   setTestRank('D');
     } else {
       setTestRank('F');
     }
@@ -147,7 +142,9 @@ const TestTwoResultPage = () => {
                   </tr>
                 ))}
               </ResultTable>
-              <InstructionTitle>■ '고수 테스트' 등급표 ■</InstructionTitle>
+              <InstructionTitle>
+                ■ '기초 역량 테스트 2' 등급표 ■
+              </InstructionTitle>
               <RankTable>
                 <th>등급</th>
                 <th>점수</th>
@@ -161,19 +158,6 @@ const TestTwoResultPage = () => {
                 ))}
               </RankTable>
             </InstructionList>
-            {/* <InstructionList>
-            ⁃ 답안지를 제출하거나 제한시간이 모두 지나면, 자동으로 채점되어 시험
-            결과가 발표됩니다. 채점 시 영어 대소문자는 구분하지 않습니다.
-          </InstructionList>
-          <InstructionList>
-            ⁃ 시험 시작 전, 종이와 펜을 미리 준비해주시기 바랍니다. 반드시
-            필요한 것은 아니지만, 만일 있다면 문제 풀이가 좀 더 수월할 것입니다.
-          </InstructionList>
-          <InstructionList>
-            ⁃ 시험이 진행되는 도중에는 새로고침을 하거나 페이지를 이탈하지
-            않도록 각별히 주의해주시기 바랍니다. 답안지가 모두 초기화될 수
-            있습니다.
-          </InstructionList> */}
           </ul>
           <InstructionList />
           <InstructionList />
@@ -188,7 +172,7 @@ const TestTwoResultPage = () => {
           <ExplanationBtn
             onClick={() => {
               window.open(
-                'https://superb-ranunculus-46a.notion.site/38a27b0ee9104ad99fd01ac1f5c341a5?pvs=4'
+                'https://superb-ranunculus-46a.notion.site/2-52489cb222c44f6894bf9defdd8ccd3c?pvs=4'
               );
             }}
             target="_blank"

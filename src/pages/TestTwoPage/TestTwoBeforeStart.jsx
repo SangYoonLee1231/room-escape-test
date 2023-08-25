@@ -55,7 +55,7 @@ const TestTwoBeforeStart = () => {
   return (
     <MainBody>
       <HeaderArea>
-        <Timer>40:00</Timer>
+        <Timer>25:00</Timer>
       </HeaderArea>
       {/* <Instruction src="./images/etc/before-start-test.png" /> */}
       <Instruction>
@@ -67,12 +67,10 @@ const TestTwoBeforeStart = () => {
             ⁃ 답은 반드시 답안지에 기재해주시기 바랍니다.
           </InstructionList>
           <InstructionList>
-            ⁃ 제한 시간은 30분, 문제 총수는 20문제이며, 배점은 문제당 5점입니다.
+            ⁃ 제한 시간은 25분, 문제 총수는 15문제이며, 배점은 문제당 5점입니다.
+            기본 점수는 25점입니다.
           </InstructionList>
-          <InstructionList>
-            ⁃ 숙련자를 위한 테스트이므로, 낙제 커트라인이 '기초 역량 테스트'보다
-            높음을 공지합니다. (40점)
-          </InstructionList>
+          <InstructionList>⁃ 낙제 커트라인은 35점입니다.</InstructionList>
           <InstructionList />
           <InstructionList />
           <InstructionList>
@@ -85,10 +83,6 @@ const TestTwoBeforeStart = () => {
           </InstructionList>
           <InstructionList />
           <InstructionList />
-          <InstructionList>
-            ⁃ 문제를 풀 때, 다른 번호의 문제를 참고해서 풀어야 하는 경우가
-            있음을 미리 밝힙니다.
-          </InstructionList>
           <InstructionList>
             ⁃ 숫자 형태를 제외한 모든 답은 사전에 등재된 말이 되는 단어입니다.
           </InstructionList>
@@ -148,7 +142,7 @@ const Instruction = styled.div`
   justify-content: center;
   align-items: center;
   width: 370px;
-  height: 700px;
+  height: 600px;
   margin: 10px 0px;
   padding: 40px;
   border-radius: 5px;

@@ -25,7 +25,7 @@ const TestTwoPage = () => {
 
   // 타이머 설정 코드 - useState Hook
   const [quizNum, setQuizNum] = useState(1);
-  const [timeRemain, setTimeRemain] = useState(2400);
+  const [timeRemain, setTimeRemain] = useState(1500);
 
   // 모달 창 Hook
   const [isOpen, setIsOpen] = useState(false);
@@ -34,7 +34,8 @@ const TestTwoPage = () => {
   const [isAnswerSheetOpen, setIsAnswerSheetOpen] = useState(false);
 
   // 답안지 작성 내용 관리 Hook
-  const [inputValues, setInputValues] = useState(Array(20).fill(''));
+  const [inputValues, setInputValues] = useState(Array(15).fill(''));
+  console.log(inputValues);
 
   useEffect(() => {}, [inputValues]);
 
@@ -88,11 +89,11 @@ const TestTwoPage = () => {
 
   // 퀴즈 번호 이동 관리 함수 코드
   const moveToPrev = () => {
-    setQuizNum(quizNum => (quizNum >= 2 ? quizNum - 1 : 20));
+    setQuizNum(quizNum => (quizNum >= 2 ? quizNum - 1 : 15));
   };
 
   const moveToNext = () => {
-    setQuizNum(quizNum => (quizNum <= 19 ? quizNum + 1 : 1));
+    setQuizNum(quizNum => (quizNum <= 14 ? quizNum + 1 : 1));
   };
 
   // 모달 창 관리 코드
@@ -124,8 +125,6 @@ const TestTwoPage = () => {
     const newInputValues = [...inputValues];
     newInputValues[index] = event.target.value;
     setInputValues(newInputValues);
-
-    // console.log(inputValues);
   };
 
   return (
@@ -142,14 +141,14 @@ const TestTwoPage = () => {
         <Question src={`./images/questions/q${quizNum}.png`} />
       )} */}
       <Question
-        src={`./images/expert_questions/expert_q${quizNum}.png`}
+        src={`./images/type2/q${quizNum}.png`}
         width="350px"
         height="350px"
       />
       <FooterArea>
         <QuestionBar>
           <MoveBtn onClick={moveToPrev}>◀︎</MoveBtn>
-          <QuestionNum>{quizNum} / 20</QuestionNum>
+          <QuestionNum>{quizNum} / 15</QuestionNum>
           <MoveBtn onClick={moveToNext}>▶︎</MoveBtn>
         </QuestionBar>
         <BtnArea>
