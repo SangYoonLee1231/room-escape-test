@@ -50,12 +50,13 @@ const LevelSelctPage = () => {
           <Text fontSize="13px">첫 번째 기초 역량 테스트 후 응시 추천</Text>
           {/* <Text fontSize="13px" /> */}
           <Text fontSize="5px" />
+          <Text fontSize="5px" />
           <Text fontSize="12px">▶︎ 문제 수: 15문제 | 제한시간: 25분 ◀︎</Text>
         </TestInfo>
       </TestButton>
       <TestButton onClick={moveToTestThree}>
         <Text fontSize="x-large" fontStyle="SEBANG_Gothic" marginBottom="20px">
-          📌 초고수 테스트
+          📌 고수 테스트
         </Text>
         <TestInfo>
           <Text fontSize="13px">다양한 방탈출 문제를 접해본</Text>

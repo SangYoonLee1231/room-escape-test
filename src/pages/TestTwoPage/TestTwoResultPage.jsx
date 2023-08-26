@@ -51,14 +51,14 @@ const TestTwoResultPage = () => {
   const rank = [
     ['S', '100점', '고수 후보생'],
     '',
-    ['A+', '95~99점', '정말 잘하심'],
-    ['A', '85~94점', '잘하심'],
+    ['A+', '90~99점', '정말 잘하심'],
+    ['A', '80~89점', '잘하심'],
     '',
-    ['B+', '70~84점', '중수'],
-    ['B', '60~69점', '성장 중'],
+    ['B+', '70~79점', '중수'],
+    ['B', '55~69점', '성장 중'],
     '',
-    ['C+', '50~59점', '초보'],
-    ['C', '40~49점', '왕초보'],
+    ['C+', '45~54점', '초보'],
+    ['C', '40~44점', '왕초보'],
     '',
     ['D', '35~39점', '경험 더 필요'],
     '',
@@ -79,17 +79,17 @@ const TestTwoResultPage = () => {
 
     if (score === 100) {
       setTestRank('S');
-    } else if (score >= 95 && score <= 99) {
+    } else if (score >= 90 && score <= 99) {
       setTestRank('A+');
-    } else if (score >= 85 && score <= 94) {
+    } else if (score >= 80 && score <= 89) {
       setTestRank('A');
-    } else if (score >= 70 && score <= 84) {
+    } else if (score >= 70 && score <= 79) {
       setTestRank('B+');
-    } else if (score >= 60 && score <= 69) {
+    } else if (score >= 55 && score <= 69) {
       setTestRank('B');
-    } else if (score >= 50 && score <= 59) {
+    } else if (score >= 45 && score <= 54) {
       setTestRank('C+');
-    } else if (score >= 40 && score <= 59) {
+    } else if (score >= 40 && score <= 44) {
       setTestRank('C');
     } else if (score >= 35 && score <= 39) {
       setTestRank('D');
