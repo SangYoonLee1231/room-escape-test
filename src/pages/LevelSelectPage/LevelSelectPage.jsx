@@ -44,14 +44,14 @@ const LevelSelctPage = () => {
           📌 중급 능력 테스트
         </Text>
         <TestInfo>
-          <Text fontSize="13px">방탈출 기본기를 바탕으로 한 중급자용 시험</Text>
+          <Text fontSize="13px">방탈출 기본기를 바탕으로 한</Text>
           {/* <Text fontSize="5px" /> */}
-          {/* <Text fontSize="13px">⦿ 2023년 8월 28일 출시 예정 ⦿</Text> */}
-          <Text fontSize="13px">빠르고 정확한 문제 해결 능력이 요구</Text>
+          <Text fontSize="14px">중급자용 시험</Text>
+          {/* <Text fontSize="13px">빠르고 정확한 문제 해결 능력이 요구</Text> */}
           {/* <Text fontSize="13px" /> */}
           <Text fontSize="5px" />
           <Text fontSize="5px" />
-          <Text fontSize="12px">▶︎ 문제 수: 15문제 | 제한시간: 20분 ◀︎</Text>
+          <Text fontSize="12px">▶︎ 문제 수: 15문제 | 제한시간: 30분 ◀︎</Text>
         </TestInfo>
       </TestButton>
       <TestButton onClick={moveToTestThree}>

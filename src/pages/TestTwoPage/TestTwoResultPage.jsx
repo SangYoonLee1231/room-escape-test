@@ -31,7 +31,6 @@ const TestTwoResultPage = () => {
   };
 
   const answer = [
-    'LAW',
     '상전벽해',
     '20',
     'FISH',
@@ -40,6 +39,7 @@ const TestTwoResultPage = () => {
     'SEAL',
     'VIVA',
     'Doctor',
+    'Gateman',
     '540',
     'CARBON',
     'DOOR',
@@ -49,16 +49,16 @@ const TestTwoResultPage = () => {
   ];
 
   const rank = [
-    ['S', '95~100점', '고수 후보생'],
+    ['S', '100점', '고수'],
     '',
-    // ['A+', '90~99점', '고수 후보생'],
-    ['A+', '85~94점', '상급자'],
-    ['A', '75~84점', '잘하심'],
+    ['A+', '90~99점', '고수 후보생'],
+    ['A', '80~89점', '상급자'],
     '',
-    ['B+', '65~74점', '중수'],
-    ['B', '55~64점', '성장 중'],
+    ['B+', '70~79점', '잘하심'],
+    ['B', '60~69점', '중수'],
     '',
-    ['C', '40~54점', '초보'],
+    ['C+', '50~59점', '성장 중'],
+    ['C', '40~49점', '초보'],
     ['D', '35~39점', '경험 더 필요'],
     '',
     ['F', '0~34점', '낙제'],
@@ -76,19 +76,19 @@ const TestTwoResultPage = () => {
     }
     setTestScore(score);
 
-    if (score >= 95 && score <= 100) {
+    if (score === 100) {
       setTestRank('S');
-      // } else if (score >= 90 && score <= 99) {
-      //   setTestRank('A+');
-    } else if (score >= 85 && score <= 94) {
+    } else if (score >= 90 && score <= 99) {
       setTestRank('A+');
-    } else if (score >= 75 && score <= 84) {
+    } else if (score >= 80 && score <= 89) {
       setTestRank('A');
-    } else if (score >= 65 && score <= 74) {
+    } else if (score >= 70 && score <= 79) {
       setTestRank('B+');
-    } else if (score >= 55 && score <= 64) {
+    } else if (score >= 60 && score <= 69) {
       setTestRank('B');
-    } else if (score >= 40 && score <= 54) {
+    } else if (score >= 50 && score <= 59) {
+      setTestRank('C+');
+    } else if (score >= 40 && score <= 49) {
       setTestRank('C');
     } else if (score >= 35 && score <= 39) {
       setTestRank('D');
