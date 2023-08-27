@@ -112,11 +112,11 @@ const TestTwoResultPage = () => {
             <InstructionList fontSize="50px">👏🏻</InstructionList>
             <InstructionList />
             <InstructionList fontSize="17px">수고하셨습니다.</InstructionList>
-            <InstructionList fontSize="17px">
-              {nickname}님의 '고수 테스트' 점수는 {testScore}
+            <InstructionList fontSize="16px">
+              {nickname}님의 '중급 능력 테스트' 점수는 {testScore}
               점입니다.
             </InstructionList>
-            <InstructionList fontSize="17px">
+            <InstructionList fontSize="16px">
               등급은 {testRank}입니다.
             </InstructionList>
             <InstructionList>
