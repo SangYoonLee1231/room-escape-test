@@ -43,23 +43,22 @@ const TestTwoResultPage = () => {
     '540',
     'CARBON',
     'DOOR',
-    'RAINBOW',
+    'COUNTRY',
     'OFFICE',
     'FILE',
   ];
 
   const rank = [
-    ['S', '100점', '고수 후보생'],
+    ['S', '95~100점', '고수 후보생'],
     '',
-    ['A+', '90~99점', '정말 잘하심'],
-    ['A', '80~89점', '잘하심'],
+    // ['A+', '90~99점', '고수 후보생'],
+    ['A+', '85~94점', '상급자'],
+    ['A', '75~84점', '잘하심'],
     '',
-    ['B+', '70~79점', '중수'],
-    ['B', '55~69점', '성장 중'],
+    ['B+', '65~74점', '중수'],
+    ['B', '55~64점', '성장 중'],
     '',
-    ['C+', '45~54점', '초보'],
-    ['C', '40~44점', '왕초보'],
-    '',
+    ['C', '40~54점', '초보'],
     ['D', '35~39점', '경험 더 필요'],
     '',
     ['F', '0~34점', '낙제'],
@@ -77,19 +76,19 @@ const TestTwoResultPage = () => {
     }
     setTestScore(score);
 
-    if (score === 100) {
+    if (score >= 95 && score <= 100) {
       setTestRank('S');
-    } else if (score >= 90 && score <= 99) {
+      // } else if (score >= 90 && score <= 99) {
+      //   setTestRank('A+');
+    } else if (score >= 85 && score <= 94) {
       setTestRank('A+');
-    } else if (score >= 80 && score <= 89) {
+    } else if (score >= 75 && score <= 84) {
       setTestRank('A');
-    } else if (score >= 70 && score <= 79) {
+    } else if (score >= 65 && score <= 74) {
       setTestRank('B+');
-    } else if (score >= 55 && score <= 69) {
+    } else if (score >= 55 && score <= 64) {
       setTestRank('B');
-    } else if (score >= 45 && score <= 54) {
-      setTestRank('C+');
-    } else if (score >= 40 && score <= 44) {
+    } else if (score >= 40 && score <= 54) {
       setTestRank('C');
     } else if (score >= 35 && score <= 39) {
       setTestRank('D');
@@ -142,9 +141,8 @@ const TestTwoResultPage = () => {
                   </tr>
                 ))}
               </ResultTable>
-              <InstructionTitle>
-                ■ '기초 역량 테스트 2' 등급표 ■
-              </InstructionTitle>
+              <InstructionList />
+              <InstructionTitle>■ '중급 능력 테스트' 등급표 ■</InstructionTitle>
               <RankTable>
                 <th>등급</th>
                 <th>점수</th>
