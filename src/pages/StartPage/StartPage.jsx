@@ -17,9 +17,9 @@ const StartPage = () => {
         {/* <Text>Made by SYL</Text> */}
       </SubTitle>
       <SubTitleTwo>
-        <Text fontSize="small">▶︎ 응시자 수 : 5276명 ◀︎</Text>
+        <Text fontSize="small">▶︎ 방문자 수 : 5276명 ◀︎</Text>
         <Text fontSize="x-small">
-          (응시자 수는 매주 월요일에 업데이트 됩니다)
+          (방문자 수는 매주 월요일에 업데이트 됩니다)
         </Text>
       </SubTitleTwo>
       <StartButton onClick={onAboutClick}>START</StartButton>
