@@ -84,7 +84,7 @@ const TestOnePage = () => {
     history.pushState(null, '', ''); // 현재 페이지 history stack 한개 더 쌓기
     window.onpopstate = () => {
       // 뒤로가기가 실행될 경우 추가 action 등록
-      alert('뒤로가기 방지용 알람입니다.');
+      alert('뒤로가기 방지용 알림입니다.');
     };
   }, []);
 
