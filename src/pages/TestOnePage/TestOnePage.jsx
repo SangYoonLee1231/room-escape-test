@@ -146,6 +146,19 @@ const TestOnePage = () => {
         width="350px"
         height="350px"
       />
+      {/* 새 작업 영역 시작 */}
+      <NewAnswerSheet>
+        <NewAnswerSheetElement>
+          <span>{quizNum}번 답.</span>
+          <input
+            key={quizNum}
+            type="text"
+            value={inputValues[quizNum - 1]}
+            onChange={event => handleChange(quizNum - 1, event)}
+          />
+        </NewAnswerSheetElement>
+      </NewAnswerSheet>
+      {/* 새 작업 영역 종료 */}
       <FooterArea>
         <QuestionBar>
           <MoveBtn onClick={moveToPrev}>◀︎</MoveBtn>
@@ -154,7 +167,7 @@ const TestOnePage = () => {
         </QuestionBar>
         <BtnArea>
           <AnswerSheetBtn onClick={handleAnswerSheetOpen}>
-            답안지 작성
+            답안지 확인
           </AnswerSheetBtn>
           <EndBtn onClick={openModal}>답안지 제출하기</EndBtn>
         </BtnArea>
@@ -203,6 +216,7 @@ const TestOnePage = () => {
                   type="text"
                   value={value}
                   onChange={event => handleChange(index, event)}
+                  disabled
                 />
               </AnswerSheetElement>
             ))}
@@ -381,6 +395,41 @@ const AnswerSheetCloseBtn = styled.button`
   transition: transform 0.1s ease-in-out;
   &:hover {
     transform: scale(1.05);
+  }
+`;
+
+/* 새 작업 영역 */
+
+const NewAnswerSheet = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 50px;
+  padding: 20px 0px;
+  border: 2px solid black;
+  margin-top: 10px;
+  background-color: white;
+  border-radius: 2px;
+`;
+
+const NewAnswerSheetElement = styled.div`
+  padding: 5px;
+  margin: 2px 0px;
+  span {
+    font-family: 'paybooc';
+  }
+  input {
+    width: 100px;
+    margin: 0px 10px;
+    border: none;
+    border-bottom: 1px solid black;
+    font-size: 15px;
+    text-align: center;
+    &:focus {
+      outline: none;
+    }
   }
 `;
 

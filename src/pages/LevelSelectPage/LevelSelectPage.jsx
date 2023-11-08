@@ -51,7 +51,7 @@ const LevelSelctPage = () => {
           {/* <Text fontSize="13px" /> */}
           <Text fontSize="5px" />
           <Text fontSize="5px" />
-          <Text fontSize="12px">▶︎ 문제 수: 15문제 | 제한시간: 30분 ◀︎</Text>
+          <Text fontSize="12px">▶︎ 문제 수: 15문제 | 제한시간: 25분 ◀︎</Text>
         </TestInfo>
       </TestButton>
       <TestButton onClick={moveToTestThree}>
