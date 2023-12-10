@@ -4,19 +4,19 @@
 
 <img src="public/images/etc/logo.png" width="500">
 
-<a href="https://roomescapetest.swygbro.com/" target="_blank">🎮 플레이 하러 가기</a>
-
 <br/>
 
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FSangYoonLee1231%2Froom-escape-test&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
+
+<a href="https://roomescapetest.swygbro.com/" target="_blank">🎮 플레이 하러 가기</a>
 
 </div>
 
 <br/><br/>
 
-## 프로젝트 소개
+## 📑 프로젝트 소개
 
-- 초보부터 고수까지, 방탈출 혹은 미궁게임을 좋아하는 모든 사람들을 위한 방탈출 능력 미니 테스트 앱입니다.
+- 초보부터 고수까지, 방탈출 혹은 미궁게임을 좋아하는 모든 사람들을 위한 '방탈출 능력 미니 테스트' 웹 앱입니다.
 
 - 방탈출 문제 및 미궁 게임 제작자 SYL의 공식 7번째 작품입니다.
 
@@ -24,7 +24,7 @@
 
 - SWYG에서 주최한 스터디 'SWYDY(스위디)'에서 진행했던 개인 프로젝트입니다.
 
-- 개발 기간 : 2023.05.15 ~ 2023.05.30
+- 📆 개발 기간 : 2023.05.15 ~ 2023.05.30
 
 <br/>
 
@@ -42,9 +42,27 @@
 
 <br/><br/>
 
+## 💰 프로젝트 성과
+
+- 총 방문자 수 **1만명** 이상, 일일 평균 방문자 수 **약 20~50명**
+
+- 광고 수익 **3만원 이상**, 개인 후원 수익 **2만원**
+
+- 경북대학교에서 진행한 수학 멘토링 프로그램에서 해당 프로젝트의 콘텐츠가 소개되었음
+
+<br/><br/>
+
 ## 🛠️ 기술 스택
 
 <div align="center">
+
+#### Development
+
+<img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+<img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black">
+<img src="https://img.shields.io/badge/Styled Components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white">
+<br/>
+<strong>✅ 버전 : ReactJS(v18.2.0), styled-components(v5.3.10)</strong>
 
 #### Environment
 
@@ -55,12 +73,6 @@
 #### Config
 
 <img src="https://img.shields.io/badge/NPM-E34F26?style=for-the-badge&logo=npm&logoColor=white">
-
-#### Development
-
-<img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
-<img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black">
-<img src="https://img.shields.io/badge/Styled Components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white">
 
 #### Etc
 
@@ -109,9 +121,14 @@
 
 - `beforeunload` `unload` 이벤트를 처리하여 구현
 
-<br/>
+<br/><br/>
 
-### ✅ 업데이트 사항
+## ✅ 업데이트 사항
+
+#### 개발 직후 (2023.05.30 ~ 2023.06.15)
+
+- UI 개선 - 사용자의 화면을 고려한 광고 위치 수정
+- 문제 오류 수정 ('고수 테스트' 16번)
 
 #### 2023.08.27
 
@@ -119,10 +136,17 @@
 
 #### 2023.11.09
 
-- 답안지 작성법 개선
-- '중급 능력 테스트' 제한시간 30분에서 25분으로 단축
+- UX 개선 - 사용자의 피드백을 통해 정답 입력 방식 개선
+- '중급 능력 테스트' 제한시간을 30분에서 25분으로 단축
 
-<br/>
+<br/><br/>
+
+## 블로그 회고록
+
+- **Part 1 : 기술적인 측면** 👉 https://sylagape1231.tistory.com/124
+- **Part 2 : 콘텐츠적 측면** 👉 https://sylagape1231.tistory.com/125
+
+<br/><br/>
 
 ## 라이센스
 
