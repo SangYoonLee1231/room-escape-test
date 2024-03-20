@@ -67,7 +67,7 @@ const TestOneBeforeStart = () => {
             ⁃ 답은 반드시 문제 하단의 답란에 기재해주시기 바랍니다.
           </InstructionList>
           <InstructionList>
-            ⁃ 제한 시간은 30분, 문제 총수는 20문제이며, 배점은 문제당 5점입니다.
+            ⁃ 제한 시간은 35분, 문제 총수는 20문제이며, 배점은 문제당 5점입니다.
           </InstructionList>
           <InstructionList>⁃ 낙제 커트라인은 20점입니다.</InstructionList>
           <InstructionList />

@@ -44,7 +44,7 @@ const TestOneResultPage = () => {
     '사과',
     '특급',
     '160',
-    '바구니',
+    'RICE',
     '527',
     'HIPPO',
     'TEST',

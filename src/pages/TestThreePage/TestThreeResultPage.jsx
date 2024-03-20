@@ -31,7 +31,7 @@ const TestThreeResultPage = () => {
   };
 
   const answer = [
-    'RICE',
+    '바구니',
     'LOGIN',
     '왕',
     'WHALE',

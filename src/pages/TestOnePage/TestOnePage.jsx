@@ -27,7 +27,7 @@ const TestOnePage = () => {
   const [quizNum, setQuizNum] = useState(1);
 
   // 타이머 설정 코드 - useState Hook
-  const [timeRemain, setTimeRemain] = useState(1800);
+  const [timeRemain, setTimeRemain] = useState(2100);
 
   // 모달 창 Hook
   const [isOpen, setIsOpen] = useState(false);

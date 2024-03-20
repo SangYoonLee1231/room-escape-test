@@ -67,7 +67,7 @@ const TestThreeBeforeStart = () => {
             ⁃ 답은 반드시 문제 하단의 답란에 기재해주시기 바랍니다.
           </InstructionList>
           <InstructionList>
-            ⁃ 제한 시간은 30분, 문제 총수는 20문제이며, 배점은 문제당 5점입니다.
+            ⁃ 제한 시간은 40분, 문제 총수는 20문제이며, 배점은 문제당 5점입니다.
           </InstructionList>
           <InstructionList>
             ⁃ 숙련자를 위한 테스트이므로, 낙제 커트라인이 '기초 역량 테스트'보다

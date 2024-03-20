@@ -32,7 +32,7 @@ const LevelSelctPage = () => {
           <Text fontSize="14px">기본기 테스트</Text>
           <Text fontSize="5px" />
           <Text fontSize="5px" />
-          <Text fontSize="12px">▶︎ 문제 수: 20문제 | 제한시간: 30분 ◀︎</Text>
+          <Text fontSize="12px">▶︎ 문제 수: 20문제 | 제한시간: 35분 ◀︎</Text>
         </TestInfo>
       </TestButton>
       <TestButton onClick={moveToTestTwo}>
@@ -51,7 +51,7 @@ const LevelSelctPage = () => {
           {/* <Text fontSize="13px" /> */}
           <Text fontSize="5px" />
           <Text fontSize="5px" />
-          <Text fontSize="12px">▶︎ 문제 수: 15문제 | 제한시간: 25분 ◀︎</Text>
+          <Text fontSize="12px">▶︎ 문제 수: 15문제 | 제한시간: 30분 ◀︎</Text>
         </TestInfo>
       </TestButton>
       <TestButton onClick={moveToTestThree}>
@@ -64,9 +64,14 @@ const LevelSelctPage = () => {
           <Text fontSize="14px">숙련자를 위한 고난도 시험</Text>
           <Text fontSize="3px" />
           <Text fontSize="3px" />
-          <Text fontSize="12px">▶︎ 문제 수: 20문제 | 제한시간: 30분 ◀︎</Text>
+          <Text fontSize="12px">▶︎ 문제 수: 20문제 | 제한시간: 40분 ◀︎</Text>
         </TestInfo>
       </TestButton>
+      <Instruction>
+        <InstructionList>전반적으로 어렵다는 의견이 많아</InstructionList>
+        <InstructionList>난이도 하향 패치를 진행하였습니다.</InstructionList>
+        <InstructionList>(2023.03.20)</InstructionList>
+      </Instruction>
     </MainBody>
   );
 };
@@ -135,6 +140,27 @@ const Text = styled.span`
   font-family: ${props => props.fontStyle || 'paybooc'};
   margin: 3px;
   margin-bottom: ${props => props.marginBottom};
+`;
+
+const Instruction = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 330px;
+  height: 100px;
+  margin: 10px 0px;
+  padding: 40px;
+  border-radius: 20px;
+  border: 3px solid black;
+  background-color: white;
+  font-family: 'paybooc';
+`;
+
+const InstructionList = styled.li`
+  padding: 5px 0px;
+  line-height: 16px;
+  font-size: 14px;
 `;
 
 export default LevelSelctPage;
