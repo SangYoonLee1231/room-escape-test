@@ -55,7 +55,7 @@ const TestThreeBeforeStart = () => {
   return (
     <MainBody>
       <HeaderArea>
-        <Timer>30:00</Timer>
+        <Timer>40:00</Timer>
       </HeaderArea>
       {/* <Instruction src="./images/etc/before-start-test.png" /> */}
       <Instruction>
