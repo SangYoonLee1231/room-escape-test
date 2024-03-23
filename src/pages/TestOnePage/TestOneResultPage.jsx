@@ -39,7 +39,7 @@ const TestOneResultPage = () => {
     'EXIT',
     'CF',
     'HOUSE',
-    '시계',
+    'CLOCK',
     '마구간',
     '사과',
     '특급',

@@ -34,7 +34,7 @@ const TestTwoResultPage = () => {
     '상전벽해',
     '20',
     'FISH',
-    '왕',
+    'KING',
     'NEST',
     'SEAL',
     'VIVA',
