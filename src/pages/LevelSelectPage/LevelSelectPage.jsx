@@ -70,7 +70,7 @@ const LevelSelctPage = () => {
       <Instruction>
         <InstructionList>전반적으로 어렵다는 의견이 많아</InstructionList>
         <InstructionList>난이도 하향 패치를 진행하였습니다.</InstructionList>
-        <InstructionList>(2023.03.20)</InstructionList>
+        <InstructionList>(2024.03.20)</InstructionList>
       </Instruction>
     </MainBody>
   );
