@@ -17,7 +17,7 @@ const StartPage = () => {
         {/* <Text>Made by SYL</Text> */}
       </SubTitle>
       <SubTitleTwo>
-        <Text fontSize="small">▶︎ 누적 방문자 수 : 14392명 ◀︎</Text>
+        <Text fontSize="small">▶︎ 누적 방문자 수 : 14855명 ◀︎</Text>
         <Text fontSize="x-small">
           (방문자 수는 매주 월요일에 업데이트 됩니다)
         </Text>
