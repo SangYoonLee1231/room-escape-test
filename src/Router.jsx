@@ -1,18 +1,18 @@
 import { createBrowserRouter } from 'react-router-dom';
-import StartPage from './pages/StartPage/StartPage';
-import LevelSelectPage from './pages/LevelSelectPage/LevelSelectPage';
+import StartPage from './pages/StartPage/StartPage.tsx';
+import LevelSelectPage from './pages/LevelSelectPage/LevelSelectPage.tsx';
 //
-import TestOnePage from './pages/TestOnePage/TestOnePage';
-import TestOneResultPage from './pages/TestOnePage/TestOneResultPage';
-import TestOneBeforeStart from './pages/TestOnePage/TestOneBeforeStart';
+import TestOnePage from './pages/TestOnePage/TestOnePage.tsx';
+import TestOneResultPage from './pages/TestOnePage/TestOneResultPage.tsx';
+import TestOneBeforeStart from './pages/TestOnePage/TestOneBeforeStart.tsx';
 //
-import TestTwoPage from './pages/TestTwoPage/TestTwoPage';
-import TestTwoResultPage from './pages/TestTwoPage/TestTwoResultPage';
-import TestTwoBeforeStart from './pages/TestTwoPage/TestTwoBeforeStart';
+import TestTwoPage from './pages/TestTwoPage/TestTwoPage.tsx';
+import TestTwoResultPage from './pages/TestTwoPage/TestTwoResultPage.tsx';
+import TestTwoBeforeStart from './pages/TestTwoPage/TestTwoBeforeStart.tsx';
 //
-import TestThreePage from './pages/TestThreePage/TestThreePage';
-import TestThreeResultPage from './pages/TestThreePage/TestThreeResultPage';
-import TestThreeBeforeStart from './pages/TestThreePage/TestThreeBeforeStart';
+import TestThreePage from './pages/TestThreePage/TestThreePage.tsx';
+import TestThreeResultPage from './pages/TestThreePage/TestThreeResultPage.tsx';
+import TestThreeBeforeStart from './pages/TestThreePage/TestThreeBeforeStart.tsx';
 //
 // import TestPage from './pages/TestPage/TestPage';
 // import TestResultPage from './pages/TestPage/TestResultPage';

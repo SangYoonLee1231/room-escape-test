@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
-const TestOneBeforeStart = () => {
+const TestOneBeforeStart: React.FC = () => {
   // 페이지 이동 Hook
   const navigate = useNavigate();
+  const [inputNickname, setInputNickname] = useState<string>('');
+
   const moveToTestOne = () => {
     const nickname = inputNickname;
     navigate(`/test-one`, {
@@ -14,21 +16,16 @@ const TestOneBeforeStart = () => {
     });
   };
 
-  // 답안지 작성 내용 관리 Hook
-  const [inputNickname, setInputNickname] = useState('');
-
-  // useEffect(() => {}, [inputNickName]);
-
   // 새로고침 방지 Hook
   useEffect(() => {
-    const handleBeforeUnload = event => {
+    const handleBeforeUnload = (event: BeforeUnloadEvent) => {
       event.preventDefault();
       // 사용자에게 표시할 메시지
       event.returnValue =
         '새로고침은 부정행위입니다. 저는 여러분의 양심을 믿습니다.';
     };
 
-    const handleRefresh = event => {
+    const handleRefresh = (event: BeforeUnloadEvent) => {
       event.preventDefault();
       // 사용자에게 표시할 메시지
       const confirmationMessage =
