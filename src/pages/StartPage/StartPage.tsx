@@ -17,7 +17,7 @@ const StartPage: React.FC = () => {
         {/* <Text>Made by SYL</Text> */}
       </SubTitle>
       <SubTitleTwo>
-        <Text fontSize="small">▶︎ 누적 방문 횟수 : 24868회 ◀︎</Text>
+        <Text fontSize="small">▶︎ 누적 방문 횟수 : 26100회 ◀︎</Text>
         <Text fontSize="x-small">
           (방문자 수는 비정기적으로 업데이트 됩니다)
         </Text>
